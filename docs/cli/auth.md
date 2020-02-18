@@ -1,11 +1,13 @@
 # Auth
 
-By default, clients must be authorized to use the service. This prevents other programs on your system from accessing
-the service without permission.
+By default, clients must be authorized with a token to use the local keysd service.
+
+For more details on how auth works, see [specs/auth](../specs/auth.md).
 
 ## `keys auth`
 
 The first time you run `keys auth`, it will ask you to setup a password.
+Running `keys auth` gives you a token which is available for the life of the local service process.
 
 ```shell
 keys auth

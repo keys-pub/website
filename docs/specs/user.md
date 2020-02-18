@@ -1,7 +1,7 @@
 # User
 
 A user is an account on another service (like Github or Twitter) linked to a key with a signed
-[Statement](specs/sigchain.md#Statement).
+[Statement](sigchain.md#Statement) in a [Sigchain](sigchain.md).
 
 This allows others to search and verify a key as belonging to a user/account on a 3rd party service.
 

@@ -35,7 +35,10 @@ module.exports = {
         path: "/docs/specs",
         collapsable: false,
         children: [
+          "/docs/specs/auth",
+          "/docs/specs/keyring",
           "/docs/specs/keys",
+          "/docs/specs/kid",
           "/docs/specs/sigchain",
           "/docs/specs/user"
         ]

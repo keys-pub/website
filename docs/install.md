@@ -22,7 +22,7 @@ scoop install keys
 
 ## Linux
 
-Add keys.app apt repository:
+Add keys.pub apt repository:
 
 ```shell
 echo "deb https://storage.googleapis.com/aptly.keys.pub current main" \

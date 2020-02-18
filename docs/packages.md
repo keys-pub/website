@@ -15,7 +15,7 @@ There is no guarantee of non-breaking changes here.
 | Package                                                                                          | Description                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
 | [github.com/keys-pub/keysd/service](https://godoc.org/github.com/keys-pub/keysd/service)         | Service (gRPC), and command line client.         |
-| [github.com/keys-pub/keysd/http/client](https://godoc.org/github.com/keys-pub/keysd/http/client) | Client [REST API](restapi/README.md).            |
-| [github.com/keys-pub/keysd/http/server](https://godoc.org/github.com/keys-pub/keysd/http/server) | Server [REST API](restapi/README.md).            |
+| [github.com/keys-pub/keysd/http/client](https://godoc.org/github.com/keys-pub/keysd/http/client) | [Client API](restapi/README.md).                 |
+| [github.com/keys-pub/keysd/http/server](https://godoc.org/github.com/keys-pub/keysd/http/server) | [Server API](restapi/README.md).                 |
 | [github.com/keys-pub/keysd/db](https://godoc.org/github.com/keys-pub/keysd/db)                   | LevelDB implementation of keys.DocumentStore.    |
 | [github.com/keys-pub/keysd/firestore](https://godoc.org/github.com/keys-pub/keysd/firestore)     | Firestore backend implements keys.DocumentStore. |
