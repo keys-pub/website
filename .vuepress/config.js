@@ -10,36 +10,40 @@ module.exports = {
         path: "/",
         collapsable: false,
         sidebarDepth: 1,
-        children: ["/install"]
+        children: ["/docs/install"]
       },
       {
         title: "Command Line",
-        path: "/cli",
+        path: "/docs/cli",
         collapsable: false,
         children: [
-          "/cli/auth",
-          "/cli/keys",
-          "/cli/encrypt",
-          "/cli/sign",
-          "/cli/user"
+          "/docs/cli/auth",
+          "/docs/cli/keys",
+          "/docs/cli/encrypt",
+          "/docs/cli/sign",
+          "/docs/cli/user"
         ]
       },
       {
         title: "REST API",
-        path: "/restapi",
+        path: "/docs/restapi",
         collapsable: false,
-        children: ["/restapi/user", "/restapi/sigchain"]
+        children: ["/docs/restapi/user", "/docs/restapi/sigchain"]
       },
       {
         title: "Specs",
-        path: "/specs",
+        path: "/docs/specs",
         collapsable: false,
-        children: ["/specs/keys", "/specs/sigchain", "/specs/user"]
+        children: [
+          "/docs/specs/keys",
+          "/docs/specs/sigchain",
+          "/docs/specs/user"
+        ]
       },
       {
         title: "Other",
         collapsable: true,
-        children: ["/building", "/service", "/packages"]
+        children: ["/docs/building", "/docs/service", "/docs/packages"]
       }
     ]
   }
