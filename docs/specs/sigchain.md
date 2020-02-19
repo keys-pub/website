@@ -1,13 +1,12 @@
 # Sigchain
 
-The sigchain is an ordered sequence of statement signed by a key.
+The sigchain is an ordered sequence of statements signed by a key.
 
 This spec is similar to [Keybase Sigchain](https://keybase.io/docs/teams/sigchain_v2) or the [Secure Scuttlebutt Feed](https://ssbc.github.io/scuttlebutt-protocol-guide/#structure).
 
 ## Statement
 
-A [Statement](https://godoc.org/github.com/keys-pub/keys#Statement) describes signed data for use in a
-sigchain.
+A [Statement](https://godoc.org/github.com/keys-pub/keys#Statement) describes signed data in a sigchain.
 
 ### Format
 
@@ -38,7 +37,7 @@ The format for a revoke statement:
 
 ### Signature
 
-The signature (`.sig`) is the signature bytes (base64 encoded) of the specific serialization, for example:
+The signature (`.sig`) is the signature bytes (base64 encoded) of the specific serialization.
 
 ### Specific Serialization
 

@@ -1,6 +1,6 @@
 # Sigchain
 
-The _keys.pub_ server provides an API for publishing and accessing sigchains (see [Sigchain](../sigchain.md)).
+The _keys.pub_ server provides an API for publishing and accessing [sigchains](/docs/specs/sigchain.md).
 
 ## GET /sigchain/:kid
 

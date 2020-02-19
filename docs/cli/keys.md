@@ -2,7 +2,7 @@
 
 ## `keys generate`
 
-Create a key.
+Create a (EdX25519) key.
 
 ```shell
 keys generate
@@ -35,12 +35,19 @@ Pull by user.
 
 ```shell
 keys pull gabriel@github
+
+# <kid>
+kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
 ```
 
 Update all our locally saved keys.
 
 ```shell
 keys pull
+
+# <kid>
+kex1e26rq9vrhjzyxhep0c5ly6rudq7m2cexjlkgknl2z4lqf8ga3uasz3s48m
+kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
 ```
 
 ## `keys push`

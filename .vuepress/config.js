@@ -7,16 +7,18 @@ module.exports = {
     sidebar: [
       {
         title: "Guide",
-        path: "/",
+        path: "/"
+      },
+      {
+        title: "Desktop",
         collapsable: false,
-        sidebarDepth: 1,
-        children: ["/docs/install"]
+        children: ["/docs/desktop/install"]
       },
       {
         title: "Command Line",
-        path: "/docs/cli",
         collapsable: false,
         children: [
+          "/docs/cli/install",
           "/docs/cli/auth",
           "/docs/cli/keys",
           "/docs/cli/encrypt",
@@ -26,19 +28,18 @@ module.exports = {
       },
       {
         title: "REST API",
-        path: "/docs/restapi",
         collapsable: false,
         children: ["/docs/restapi/user", "/docs/restapi/sigchain"]
       },
       {
         title: "Specs",
-        path: "/docs/specs",
         collapsable: false,
         children: [
           "/docs/specs/auth",
           "/docs/specs/keyring",
           "/docs/specs/keys",
           "/docs/specs/kid",
+          "/docs/specs/encrypt",
           "/docs/specs/sigchain",
           "/docs/specs/user"
         ]

@@ -1,6 +1,6 @@
 # Install
 
-To manually build the binaries, see [Building From Source](building.md).
+To manually build the binaries, see [building from source](building.md).
 
 ## macOS
 

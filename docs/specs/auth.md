@@ -4,7 +4,7 @@ In order to use the keysd local service, you need to authenticate using `keys au
 
 This password is never stored on disk and is only used to generate a auth token. This token is only stored in memory by the keysd service.
 
-In addition to authentication, we use this password to derive a key which encrypts [Keyring](keyring.md) items.
+In addition to authentication, we use this password to derive a key which encrypts [keyring](keyring.md) items.
 
 We use the Argon2id KDF with this password and a salt value with the following parameters:
 

@@ -2,7 +2,7 @@
 
 ## `keys user search`
 
-Search.
+Search for keys by user.
 
 ```shell
 keys user search

@@ -1,6 +1,6 @@
 # Key Identifiers
 
-Key identifiers (`kid`) use the [bech32](https://en.bitcoin.it/wiki/BIP_0173) format.
+Key identifiers "`kid`" use the [bech32](https://en.bitcoin.it/wiki/BIP_0173) format.
 
 The bech32 format has a prefix, separator and data part.
 
