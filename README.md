@@ -1,21 +1,42 @@
+---
+title: keys.pub - Tools to help manage cryptographic keys
+---
+
 # keys.pub
 
-keys.pub hosts a set of tools to help manage cryptographic keys.
+::: warning
+This project is in development and has not been audited. Please don't use for anything important.
+:::
 
-- Create [keys](docs/specs/keys.md) capable of signing and encryption
-- [Encrypt](docs/cli/encrypt.md) and [sign](docs/cli/sign.md) text or files
-- [Link a key](docs/specs/user.md) to an identity on Github, Twitter, etc
-- [Search and find keys](docs/restapi/user.md#search) on keys.pub
-- Short [key identifiers](docs/specs/kid.md) are public keys
-- Publish signed statements to a [sigchain](docs/specs/sigchain.md)
-- Protect keys using a [keyring](docs/specs/keyring.md) secured by the OS and a password
-- 100% open source [go libraries](docs/packages.md)
-- End to end [service architecture](docs/service.md) with [authenticated access](docs/specs/auth.md)
+## Install
 
-Coming soon:
+- [Install](docs/cli/install.md) (Command Line)
+- [Install](docs/desktop/install.md) (Desktop)
+
+## Introduction
+
+keys.pub hosts a set of tools to help manage cryptographic keys. This includes a [software library](/docs/lib/), a [command line utility](/docs/cli/), [a desktop app](/docs/desktop/install.md), and a [REST API](docs/restapi/).
+
+The default key is a [Curve25519 key (EdX25519)](/docs/specs/keys.md) capable of signing and encryption.
+Using this key, you can create a [sigchain](/docs/specs/sigchain.md) (an ordered sequence of signed statements).
+You can [link a key to an identity](docs/specs/user.md) on Github or Twitter, etc, by publishing a signed statement on that service and in a sigchain on keys.pub.
+
+You can [search for keys](docs/restapi/user.md#search) by user name and service (Github or Twitter, etc), or lookup a user for a key identifier.
+
+[Key identifiers](/docs/specs/kid.md) are [Bech32 format](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki), encode the type of key and public key bytes, and include a checksum with error correction.
+
+The [Saltpack](https://saltpack.org) format is used for signing and encryption, providing authenticity, repudability and anonymity.
+
+Your keys are protected by a [keyring](docs/specs/keyring.md) which is secured by both the OS and a user supplied password (similar to a password manager).
+
+The `keysd` daemon runs as a [gRPC service](/docs/service.md) on your computer.
+
+- [Command Line](/docs/cli/)
+- [Specs](/docs/specs/)
+- [REST API](/docs/restapi/)
+- [Library](/docs/lib/)
+
+## Coming soon
 
 - Other key types (age, legacy/pgp)?
-
-::: warning
-This project is in development and has not been audited or reviewed. Use at your own risk.
-:::
+- Better documentation

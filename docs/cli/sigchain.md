@@ -5,7 +5,7 @@
 View a sigchain.
 
 ```shell
-keys sigchain show kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
+> keys sigchain show kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
 ```
 
 ```json
@@ -24,7 +24,7 @@ keys sigchain show kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80
 Add to sigchain. Anything added to a sigchain is public.
 
 ```shell
-echo "test" | keys sigchain statement add -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
+> echo "test" | keys sigchain statement add -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
 ```
 
 ## `keys sigchain statement revoke`
@@ -32,5 +32,5 @@ echo "test" | keys sigchain statement add -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3
 Revoke statement.
 
 ```shell
-keys sigchain statement revoke -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c -seq 2
+> keys sigchain statement revoke -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c -seq 2
 ```

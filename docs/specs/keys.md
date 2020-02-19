@@ -17,4 +17,4 @@ and so we call this an EdX25519 key.
 ## X25519
 
 X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519.
-X25519 keys only provides public key authenticated encryption.
+X25519 keys only provide public key authenticated encryption.

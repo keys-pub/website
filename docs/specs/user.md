@@ -51,7 +51,7 @@ Place this user signed statement at a location or the service, for example, [htt
 
 ## Sigchain Statement
 
-After placing the signed statement at an URL, saved a signed statement in the sigchain with the additional information.
+After placing the signed statement at an URL, save a signed statement in the sigchain with the additional information.
 
 | Fields | Description                |
 | ------ | -------------------------- |

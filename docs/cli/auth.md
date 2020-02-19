@@ -2,6 +2,8 @@
 
 By default, clients must be authorized with a token to use the local keysd service.
 
+The `keys` client reads the auth token from the `KEYS_AUTH` environment variable.
+
 For more details on how auth works, see [specs/auth](../specs/auth.md).
 
 ## `keys auth`
@@ -10,7 +12,7 @@ The first time you run `keys auth`, it will ask you to setup a password.
 Running `keys auth` gives you a token which is available for the life of the local service process.
 
 ```shell
-keys auth
+> keys auth
 
 OK, let's create a password.
 Create a password:
@@ -28,4 +30,12 @@ export KEYS_AUTH="AbGNXgc4aK9x1b1pHlOLZ33meXyv796DyWK5jHqiS1R"
 #
 # For Powershell:
 #  $env:KEYS_AUTH = (keys auth -token)
+```
+
+If you are in a a bash/zsh environment, you can run:
+
+```shell
+> eval $(keys auth)
+# or
+> export KEYS_AUTH=`keys auth -token`
 ```

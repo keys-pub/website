@@ -1,6 +1,6 @@
 # Sigchain
 
-The sigchain is an ordered sequence of statements signed by a key.
+A sigchain is an ordered sequence of signed statements by a key.
 
 This spec is similar to [Keybase Sigchain](https://keybase.io/docs/teams/sigchain_v2) or the [Secure Scuttlebutt Feed](https://ssbc.github.io/scuttlebutt-protocol-guide/#structure).
 

@@ -1,9 +1,9 @@
 # Keyring
 
-Keys are stored in the keyring. All keyring items are encrypted, using a password/salt derived key from [Auth](auth.md.
+Keys are stored in a keyring. All keyring items are encrypted, using a password/salt derived key from [authentication](auth.md).
 This provides an important additional layer of protection on platforms such as Windows and Linux, where the underlying system keyring/crendentials are only secure at the user account level.
 
-The [github.com/keys-pub/keys/keyring](https://github.com/keys-pub/keys/tree/master/keyring) package uses the following APIs:
+The [github.com/keys-pub/keys/keyring](https://pkg.go.dev/github.com/keys-pub/keys/keyring) package uses the following APIs:
 
 ## macOS
 
