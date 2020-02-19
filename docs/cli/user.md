@@ -5,7 +5,7 @@
 Search for keys by user.
 
 ```shell
-keys user search
+> keys user search
 
 # <name@service> <kid>
 gabriel@github kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
@@ -15,7 +15,7 @@ gabrlh@twitter kex1e26rq9vrhjzyxhep0c5ly6rudq7m2cexjlkgknl2z4lqf8ga3uasz3s48m
 Search for a user.
 
 ```shell
-keys user search -q gabriel
+> keys user search -q gabriel
 
 # <name@service> <kid>
 gabriel@github kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
@@ -24,7 +24,7 @@ gabriel@github kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
 Find by key id.
 
 ```shell
-keys user find kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
+> keys user find kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
 
 # <name@service>
 gabriel@github
@@ -35,6 +35,8 @@ gabriel@github
 This command links a key to a user account.
 
 ```shell
+> keys user setup
+
 What's the service?
 (g) Github
 (t) Twitter
@@ -63,7 +65,7 @@ User successfully setup.
 Create signed statement for service user, linking key `kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c` to `gabriel@github`.
 
 ```shell
-keys user sign -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
+> keys user sign -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
 -service github -name gabriel
 
 # Signed statement
@@ -82,7 +84,7 @@ Post this to a gist (if on github) or tweet (if on twitter) and run `keys user a
 Verify signed statement at URL and save to sigchain.
 
 ```shell
-keys user add -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
+> keys user add -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
 -service github -name gabriel \
 -url https://gist.github.com/gabriel/01ce43aa867aa3b0105a6d18be7c98f6
 ```
