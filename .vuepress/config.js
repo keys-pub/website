@@ -18,7 +18,6 @@ module.exports = {
       {
         title: "Command Line",
         collapsable: false,
-        path: "/docs/cli/",
         children: [
           "/docs/cli/install",
           "/docs/cli/auth",
@@ -31,8 +30,11 @@ module.exports = {
       {
         title: "REST API",
         collapsable: false,
-        path: "/docs/restapi/",
-        children: ["/docs/restapi/user", "/docs/restapi/sigchain"]
+        children: [
+          "/docs/restapi/user",
+          "/docs/restapi/sigchain",
+          "/docs/restapi/errors"
+        ]
       },
       {
         title: "Library",
@@ -42,7 +44,6 @@ module.exports = {
       {
         title: "Specs",
         collapsable: false,
-        path: "/docs/specs/",
         children: [
           "/docs/specs/auth",
           "/docs/specs/keys",

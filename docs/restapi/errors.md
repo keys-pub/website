@@ -1,4 +1,4 @@
-# REST API (Errors)
+# Errors
 
 The API returns errors in the format:
 
