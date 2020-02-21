@@ -4,20 +4,23 @@
 
 Encrypt text to armored msg.enc (from stdin).
 
+Specify a key id or user name@service as recipients.
+
 ```shell
 > echo -n "My secret 🤓" |  keys encrypt -armor \
--signer kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
+-signer gabriel@github \
 -recipient kex1ts0qw8fwkvle2f2xsqumetmr9ev5ppx22rl5hnycen68sanjzl7qnta629 \
--recipient kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c > msg.enc
+-recipient gabriel@github > msg.enc
 ```
 
 Encrypt image.png to image.png.enc (using -in and -out).
 
+Signer is optional, if unspecified, is anonymous.
+
 ```shell
 > keys encrypt \
--signer kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
 -recipient kex1ts0qw8fwkvle2f2xsqumetmr9ev5ppx22rl5hnycen68sanjzl7qnta629 \
--recipient kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
+-recipient gabriel@github \
 -in image.png -out image.png.enc
 ```
 

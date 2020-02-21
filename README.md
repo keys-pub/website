@@ -2,7 +2,7 @@
 title: keys.pub - Tools to help manage cryptographic keys
 ---
 
-# keys.pub
+<img src="./logo.png" width="280"/>
 
 ::: warning
 This project is in development and has not been audited. Don't use for anything important yet.
@@ -10,16 +10,16 @@ This project is in development and has not been audited. Don't use for anything 
 
 ## Install
 
-- [Install Command Line](docs/cli/install.md)
-- [Install Desktop](docs/desktop/install.md) (includes command line)
+- [Install Command Line](/docs/cli/install.md)
+- [Install Desktop](/docs/desktop/install.md) (includes command line)
 
 ## Introduction
 
-keys.pub hosts a set of tools to help manage cryptographic keys. This includes a [software library](/docs/lib/), a [command line utility](/docs/cli/), [a desktop app](/docs/desktop/install.md), and a [REST API](docs/restapi/).
+keys.pub hosts a set of tools to help manage cryptographic keys. This includes a [software library](/docs/lib/), a [command line utility](/docs/cli/), [a desktop app](/docs/desktop/install.md), and a [REST API](/docs/restapi/).
 
 The default key is a [Curve25519 key (EdX25519)](/docs/specs/keys.md) capable of signing and encryption.
 Using this key, you can create a [sigchain](/docs/specs/sigchain.md) (an ordered sequence of signed statements).
-You can [link a key to an identity](docs/specs/user.md) on Github or Twitter, etc, by publishing a signed statement on that service and in a sigchain on keys.pub.
+You can [link a key to an identity](/docs/specs/user.md) on Github or Twitter, etc, by publishing a signed statement on that service and in a sigchain on keys.pub.
 
 You can [search for keys](docs/restapi/user.md#search) by user name and service (Github or Twitter, etc), or lookup a user for a key identifier.
 

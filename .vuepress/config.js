@@ -35,6 +35,11 @@ module.exports = {
         children: ["/docs/restapi/user", "/docs/restapi/sigchain"]
       },
       {
+        title: "Library",
+        collapsable: false,
+        children: ["/docs/lib/encrypt", "/docs/lib/packages"]
+      },
+      {
         title: "Specs",
         collapsable: false,
         path: "/docs/specs/",
@@ -51,7 +56,7 @@ module.exports = {
       {
         title: "Other",
         collapsable: true,
-        children: ["/docs/building", "/docs/service", "/docs/packages"]
+        children: ["/docs/building", "/docs/service"]
       }
     ]
   }

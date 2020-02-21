@@ -6,7 +6,7 @@ macOS only, other platforms coming soon.
 
 ## macOS
 
-To install via [homebrew](https://brew.sh/) casks:
+To install via [homebrew](https://brew.sh/) cask:
 
 ```shell
 brew tap keys-pub/tap
