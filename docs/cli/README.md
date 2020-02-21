@@ -1,5 +1,7 @@
 # Command Line
 
+[Install](install.md)
+
 ## Auth
 
 - [keys auth](auth.md#keys-auth)

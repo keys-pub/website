@@ -5,13 +5,13 @@ title: keys.pub - Tools to help manage cryptographic keys
 # keys.pub
 
 ::: warning
-This project is in development and has not been audited. Please don't use for anything important.
+This project is in development and has not been audited. Don't use for anything important yet.
 :::
 
 ## Install
 
-- [Install](docs/cli/install.md) (Command Line)
-- [Install](docs/desktop/install.md) (Desktop)
+- [Install Command Line](docs/cli/install.md)
+- [Install Desktop](docs/desktop/install.md) (includes command line)
 
 ## Introduction
 

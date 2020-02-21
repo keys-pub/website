@@ -8,7 +8,7 @@ To install via [homebrew](https://brew.sh/):
 
 ```shell
 brew tap keys-pub/tap
-brew install keys-pub/tap/keys
+brew install keys
 ```
 
 ## Windows
