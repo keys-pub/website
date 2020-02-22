@@ -1,5 +1,5 @@
 ---
-title: keys.pub - Tools to help manage cryptographic keys
+title: Tools to help manage cryptographic keys
 ---
 
 <img src="./logo.png" width="280"/>
@@ -11,7 +11,7 @@ This project is in development and has not been audited. Don't use for anything 
 ## Install
 
 - [Install Command Line](/docs/cli/install.md)
-- [Install Desktop](/docs/desktop/install.md) (includes command line)
+- [Install the Desktop App](/docs/desktop/install.md) (includes command line)
 
 ## Introduction
 
@@ -31,10 +31,10 @@ Your keys are protected by a [keyring](docs/specs/keyring.md) which is secured b
 
 The `keysd` daemon runs as a [gRPC service](/docs/service.md) on your computer.
 
-- [Command Line](/docs/cli/)
-- [REST API](/docs/restapi/)
-- [Library](/docs/lib/)
-- [Specs](/docs/specs/)
+- [Command Line](/docs/cli/install.md)
+- [REST API](/docs/restapi/user.md)
+- [Library](/docs/lib/encrypt.md)
+- [Specs](/docs/specs/keys.md)
 
 ## Coming soon
 
