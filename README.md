@@ -15,7 +15,7 @@ This project is in development and has not been audited. Don't use for anything 
 
 ## Introduction
 
-keys.pub hosts a set of tools to help manage cryptographic keys. This includes a [software library](/docs/lib/encrypt.md), a [command line utility](/docs/cli/install.md), [a desktop app](/docs/desktop/install.md), and a [REST API](/docs/restapi/user.md).
+keys.pub hosts a set of tools to help manage cryptographic keys. This includes a [software library](/docs/lib/), a [command line utility](/docs/cli/), [a desktop app](/docs/desktop/), and a [REST API](/docs/restapi/).
 
 The default key is a [Curve25519 key (EdX25519)](/docs/specs/keys.md) capable of signing and encryption.
 Using this key, you can create a [sigchain](/docs/specs/sigchain.md) (an ordered sequence of signed statements).
@@ -31,12 +31,21 @@ Your keys are protected by a [keyring](docs/specs/keyring.md) which is secured b
 
 The `keysd` daemon runs as a [gRPC service](/docs/service.md) on your computer.
 
-- [Command Line](/docs/cli/install.md)
-- [REST API](/docs/restapi/user.md)
-- [Library](/docs/lib/encrypt.md)
-- [Specs](/docs/specs/keys.md)
+- [Command Line](/docs/cli/)
+- [REST API](/docs/restapi/)
+- [Library](/docs/lib/)
+- [Specs](/docs/specs/)
 
-## Coming soon
+### Similarities/Differences
 
-- Other key types (age, legacy/pgp)?
+- [Keybase](https://keybase.io/docs): This project borrows many ideas from Keybase, including sigchains and user (proofs), and uses [Saltpack](https://saltpack.org) and [keybase/go-keychain](https://github.com/keybase/go-keychain) and other packages.
+  However, this project only provides a 1-to-1 association of a key to a user.
+- [Age](https://github.com/FiloSottile/age): We also use Bech32 as a key identifiers, and [convert Ed25519 keys to X25519](https://blog.filippo.io/using-ed25519-keys-for-encryption/).
+
+### Coming soon
+
+- Other key types like age?
+- Legacy/pgp?
 - Better documentation
+- More services (Reddit, Facebook, Website)
+- Inbox
