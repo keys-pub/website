@@ -17,8 +17,6 @@ This project is in development and has not been audited. Don't use for anything 
 
 keys.pub is a [library](/docs/lib/), [utility](/docs/cli/) and [app](/docs/desktop/install.md) that manages cryptographic keys, sigchains and user identities.
 
-For example, this allows you find a key and create an encrypted message, using the `keys` utility:
-
 ```shell
 > keys pull gabriel@github
 > echo -n "hi 🤓" | keys encrypt -armor -recipient gabriel@github
