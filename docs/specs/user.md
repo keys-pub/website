@@ -1,6 +1,6 @@
 # User
 
-A user is an account on another service (like Github or Twitter) linked to a key with a signed
+A user is an account on another service (like Github, Twitter, Reddit, etc) linked to a key with a signed
 [statement](sigchain.md#Statement) in a [sigchain](sigchain.md).
 
 This allows others to search and verify a key as belonging to an identity on another service.
@@ -15,11 +15,11 @@ The steps are:
 
 The signed statement signs the following fields:
 
-| Fields | Description                |
-| ------ | -------------------------- |
-| `k`    | Key identifier.            |
-| `n`    | Username.                  |
-| `sr`   | Service (github, twitter). |
+| Fields | Description                        |
+| ------ | ---------------------------------- |
+| `k`    | Key identifier.                    |
+| `n`    | Username.                          |
+| `sr`   | Service (github, twitter, reddit). |
 
 For example,
 

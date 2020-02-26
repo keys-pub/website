@@ -19,9 +19,9 @@ keys.pub hosts a set of tools to help manage cryptographic keys. This includes a
 
 The default key is a [Curve25519 key (EdX25519)](/docs/specs/keys.md) capable of signing and encryption.
 Using this key, you can create a [sigchain](/docs/specs/sigchain.md) (an ordered sequence of signed statements).
-You can [link a key to an identity](/docs/specs/user.md) on Github or Twitter, etc, by publishing a signed statement on that service and in a sigchain on keys.pub.
+You can [link a key to an identity](/docs/specs/user.md) (on Github, Twitter, etc), by publishing a signed statement on that service and in a sigchain on keys.pub.
 
-You can [search for keys](docs/restapi/user.md#search) by user name and service (Github or Twitter, etc), or lookup a user by a key identifier.
+You can [search for keys](docs/restapi/user.md#search) by user name and service, or lookup a user by a key identifier.
 
 [Key identifiers](/docs/specs/kid.md) are [Bech32 format](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki), encode the type of key and public key bytes, and include a checksum with error correction.
 
@@ -47,5 +47,5 @@ The `keysd` daemon runs as a [gRPC service](/docs/service.md) on your computer.
 - Other key types like age?
 - Legacy/pgp?
 - Better documentation
-- More services (Reddit, Facebook, Website)
+- More services (Facebook, Website)
 - Inbox
