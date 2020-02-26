@@ -1,5 +1,5 @@
 # REST API
 
-- [Search for keys by user](user.md) (`/user/search`, `/user/:kid`)
-- [Getting sigchains](sigchain.md) (`/sigchain/:kid`)
+- [Search for keys and users](user.md) (`/user/search`, `/user/:kid`)
+- [Sigchains](sigchain.md) (`/sigchain/:kid`)
 - [Error codes](errors.md)
