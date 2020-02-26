@@ -17,6 +17,13 @@ This project is in development and has not been audited. Don't use for anything 
 
 keys.pub is a [library](/docs/lib/), [utility](/docs/cli/) and [app](/docs/desktop/install.md) that manages cryptographic keys, sigchains and user identities.
 
+For example, this allows you find a key and create an encrypted message, using the `keys` utility:
+
+```shell
+> keys pull gabriel@github
+> echo -n "hi 🤓" | keys encrypt -armor -recipient gabriel@github
+```
+
 The default key is a [Curve25519 key (EdX25519)](/docs/specs/keys.md) capable of signing and encryption.
 Using this key, you can create a [sigchain](/docs/specs/sigchain.md) (an ordered sequence of signed statements).
 You can [link a key to an identity](/docs/specs/user.md) (on Github, Twitter, etc), by publishing a signed statement in your sigchain.
