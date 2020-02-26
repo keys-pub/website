@@ -21,7 +21,7 @@ This is compatible as a JSON canonical format (ordered keys, no whitespace, with
 | seq    | int    | Sequence number, starting at 1 for the root statement.                                            |
 | revoke | int    | (Optional) Sequence number of a statement to revoke.                                              |
 | ts     | int    | (Optional) Timestamp, number of milliseconds since 1 January 1970 00:00 UTC.                      |
-| type   | string | (Optional) Statement type ("", "revoke", "user", "bpk").                                          |
+| type   | string | (Optional) Statement type ("", "revoke", "user").                                          |
 
 The format for a statement:
 

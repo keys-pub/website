@@ -1,6 +1,11 @@
 # Decrypt
 
-The following example decrypts the message from the [encrypt] example:
+The following example decrypts the message from the [encrypt](encrypt.md) example:
+
+- Initialize and setup/unlock a Keyring
+- Create a Keystore
+- Import a EdX25519 key
+- Decrypt and verify a Saltpack message
 
 ```go
 import (
@@ -29,7 +34,6 @@ if err := keyring.UnlockWithPassword(kr, "bobpassword"); err != nil {
     log.Fatal(err)
 }
 ks := keys.NewKeystore(kr)
-sp := saltpack.NewSaltpack(ks)
 
 // Import edx25519 key to bob's Keystore
 kmsg := `BEGIN EDX25519 KEY MESSAGE.
@@ -45,7 +49,8 @@ if err := ks.SaveKey(bob); err != nil {
     log.Fatal(err)
 }
 
-// Bob decrypt's
+// Bob decrypts the saltpack message.
+sp := saltpack.NewSaltpack(ks)
 out, signer, err := sp.DecryptArmored(encrypted)
 if err != nil {
     log.Fatal(err)

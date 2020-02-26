@@ -3,13 +3,13 @@
 A user is an account on another service (like Github, Twitter, Reddit, etc) linked to a key with a signed
 [statement](sigchain.md#Statement) in a [sigchain](sigchain.md).
 
-This allows others to search and verify a key as belonging to an identity on another service.
+This allows others to search and verify a key as belonging to a user identity.
 
 The steps are:
 
 1. Generate a user signed statement (saltpack armored) with the name, service and key identifier.
 2. Place the statement on the service at an URL controlled by the account.
-3. Save a signed statement in the sigchain including all the information about including the URL on the service where to find the signed statement.
+3. Save a signed statement in the key's sigchain including name, service, key identifier and the url from step 2.
 
 ## Statement
 
@@ -47,7 +47,7 @@ kC5EFOwCedvHFpc AQVqULHjcSpeCfZ EIOaQ2IP.
 END MESSAGE.
 ```
 
-Place this user signed statement at a location or the service, for example, [https://gist.github.com/gabriel/02fae653e737bdeb7c730da669c949b1/edit](https://gist.github.com/gabriel/02fae653e737bdeb7c730da669c949b1/edit).
+Place this user signed statement at a location or the service, for example, [https://gist.github.com/gabriel/ceea0f3b675bac03425472692273cf52](https://gist.github.com/gabriel/ceea0f3b675bac03425472692273cf52).
 
 ## Sigchain Statement
 

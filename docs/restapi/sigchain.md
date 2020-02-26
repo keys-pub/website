@@ -29,20 +29,7 @@ curl https://keys.pub/sigchain/kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgf
 | Response   | Description                                              |
 | ---------- | -------------------------------------------------------- |
 | kid        | Key ID                                                   |
-| statements | Array&lt;[Statement](../specs/sigchain.md#Statement)&gt; |
-
-### Statement
-
-| Field  | Type   | Description                                                                                        |
-| ------ | ------ | -------------------------------------------------------------------------------------------------- |
-| data   | string | Data (base64 encoded).                                                                             |
-| kid    | id     | User public key id used to sign.                                                                   |
-| prev   | string | Hash (SHA-256, base64 encoded) of previous sigchain statement, or ommitted for the root statement. |
-| seq    | int    | Sequence number, starting at 1 for the root statement.                                             |
-| sig    | string | Signature (base64 encoded) of this statement.                                                      |
-| revoke | int    | (Optional) Sequence number of a statement to revoke (or 0).                                        |
-| type   | string | (Optional) Statement type ("revoke", "user").                                                      |
-| ts     | int    | (Optional) Timestamp, number of milliseconds since 1 January 1970 00:00 UTC.                       |
+| statements | Array&lt;[Statement](../specs/sigchain.md#statement)&gt; |
 
 ## PUT /sigchain/:kid/:seq
 
@@ -59,7 +46,7 @@ The max size for the msg is 16KB.
 ## GET /sigchains
 
 List all sigchain statements for everyone.
-The results are in order of the statements added, and is meant for sync'ing all sigchains to the local db.
+The results are in order of the statements added, and is meant for sync'ing all sigchains from one place to another.
 
 | Params  | type           | Description                                                      |
 | ------- | -------------- | ---------------------------------------------------------------- |
