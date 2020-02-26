@@ -29,9 +29,8 @@ if err := keyring.UnlockWithPassword(kr, "alicepassword"); err != nil {
 // Create a Keystore (backed by the Keyring).
 ks := keys.NewKeystore(kr)
 
-// Configure saltpack format.
+// Saltpack.
 sp := saltpack.NewSaltpack(ks)
-sp.SetArmored(true)
 
 // Create an EdX25519 key and save it to the Keystore.
 alice := keys.GenerateEdX25519Key()
@@ -43,7 +42,7 @@ bobID := keys.ID("kex1yy7amjzd5ld3k0uphvyetlz2vd8yy3fky64dut9jdf9qh852f0nsxjgv0m
 message := []byte("hi bob")
 
 // Encrypt using Saltpack from alice to bob (include alice as a recipient too).
-encrypted, err := sp.Encrypt(message, alice.X25519Key(), bobID, alice.ID())
+encrypted, err := sp.EncryptArmored(message, alice.X25519Key(), bobID, alice.ID())
 if err != nil {
     log.Fatal(err)
 }
