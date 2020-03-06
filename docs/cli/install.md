@@ -2,6 +2,8 @@
 
 To manually build the binaries, see [building from source](building.md).
 
+Or are you looking for [command line usage](/docs/cli/)?
+
 ## macOS
 
 To install via [homebrew](https://brew.sh/):

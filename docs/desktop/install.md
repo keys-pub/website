@@ -8,7 +8,7 @@ macOS only, other platforms coming soon.
 
 ### Download
 
-Download the latest release: [Keys-0.0.17.dmg](https://github.com/keys-pub/app/releases/download/v0.0.17/Keys-0.0.17.dmg)
+Download the latest release: [Keys-0.0.20.dmg](https://github.com/keys-pub/app/releases/download/v0.0.20/Keys-0.0.20.dmg)
 
 ### Homebrew Cask
 

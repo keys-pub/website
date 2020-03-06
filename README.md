@@ -15,16 +15,21 @@ This project is in development and has not been audited. Don't use for anything 
 
 ## Introduction
 
-keys.pub is a [library](/docs/lib/), [utility](/docs/cli/) and [app](/docs/desktop/install.md) that manages cryptographic keys, sigchains and user identities.
+keys.pub is a [library](/docs/lib/), [command line utility](/docs/cli/) and [desktop app](/docs/desktop/install.md) that manages cryptographic keys, sigchains and user identities.
+
+Using these tools you can associate a user identity (`gabriel@github`) with a public key (`kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c`). Using this key, you can encrypt and sign messages and files.
 
 ```shell
 > keys pull gabriel@github
-> echo -n "hi 🤓" | keys encrypt -armor -recipient gabriel@github
+kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
+
+> echo "hi 🤓" | keys encrypt -armor -recipient gabriel@github
+BEGIN SALTPACK ENCRYPTED MESSAGE. kcJn5brvybfNjz6 D5ll2Nk0Z2co0as ...
 ```
 
 The default key is a [Curve25519 key (EdX25519)](/docs/specs/keys.md) capable of signing and encryption.
 Using this key, you can create a [sigchain](/docs/specs/sigchain.md) (an ordered sequence of signed statements).
-You can [link a key to an identity](/docs/specs/user.md) (on Github, Twitter, etc), by publishing a signed statement in your sigchain.
+You can [link a key to an identity](/docs/specs/user.md) (on Github, Twitter, Reddit, etc), by publishing a signed statement in your sigchain.
 
 You can [search for keys](/docs/restapi/user.md#get-user-search) by user name and service, or [lookup a user](/docs/restapi/user.md#get-user-kid) by a key identifier using a [REST API](/docs/restapi/).
 
@@ -37,9 +42,12 @@ Your keys are protected by a [keyring](docs/specs/keyring.md) which is secured b
 The `keysd` daemon runs as a [gRPC service](/docs/service.md) on your computer.
 
 - [Command Line](/docs/cli/)
+- [Desktop App](/docs/desktop/)
 - [REST API](/docs/restapi/)
 - [Library](/docs/lib/)
 - [Specs](/docs/specs/)
+
+<img src="./app.png"/>
 
 ### Similarities/Differences
 
