@@ -8,7 +8,7 @@ Specify a key id or user name@service as recipients.
 
 ```shell
 > echo -n "My secret 🤓" | keys encrypt -armor \
--signer gabriel@github \
+-sender gabriel@github \
 -recipient kex1ts0qw8fwkvle2f2xsqumetmr9ev5ppx22rl5hnycen68sanjzl7qnta629 \
 -recipient gabriel@github > msg.enc
 ```
@@ -28,7 +28,7 @@ Encrypt image.png to image.png.enc (using stdin and stdout).
 
 ```shell
 > cat image.png | keys encrypt \
--signer kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
+-sender kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
 -recipient kex1ts0qw8fwkvle2f2xsqumetmr9ev5ppx22rl5hnycen68sanjzl7qnta629 \
 -recipient kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c > image.png.enc
 ```
