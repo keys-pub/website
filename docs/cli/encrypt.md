@@ -10,12 +10,13 @@ Specify a key id or user name@service as recipients.
 > echo -n "My secret 🤓" | keys encrypt -armor \
 -sender gabriel@github \
 -recipient kex1ts0qw8fwkvle2f2xsqumetmr9ev5ppx22rl5hnycen68sanjzl7qnta629 \
--recipient gabriel@github > msg.enc
+-recipient gabriel@github
+-stdin -stdout > msg.enc
 ```
 
 Encrypt image.png to image.png.enc (using -in and -out).
 
-Signer is optional, if unspecified, is anonymous.
+Sender is optional, if unspecified, is anonymous.
 
 ```shell
 > keys encrypt \
