@@ -1,6 +1,8 @@
 # Install
 
-To manually build the binaries, see [building from source](building.md).
+_The desktop app comes with the command line, but if you want to install only the command line, you are in the right place._
+
+To manually build the binaries, see [building from source](/docs/building.md).
 
 Or are you looking for [command line usage](/docs/cli/)?
 

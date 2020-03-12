@@ -1,6 +1,12 @@
 # Command Line
 
-- [How to install the command line](install.md)
+## Install
+
+- [How to install the command line](/docs/desktop/cli.md) (from the desktop app)
+- [How to install the command line](install.md) (only)
+
+## Usage
+
 - [How to auth on the command line](auth.md) (`keys auth`)
 - [How to generate, list, remove, import/export keys](keys.md) (`keys generate`, `keys list` ...)
 - [How to encrypt/decrypt files or piped data](encrypt.md) (`keys encrypt/decrypt`)

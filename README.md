@@ -10,22 +10,29 @@ This project is in development and has not been audited. Don't use for anything 
 
 ## Install
 
-- [Install Command Line](/docs/cli/install.md)
-- [Install the Desktop App](/docs/desktop/install.md) (includes command line)
+[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.22/Keys-0.0.22.dmg)
+
+[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.22/Keys-0.0.22.msi)
+
+_Linux coming soon._
+
+Or the [command line only](/docs/cli/install.md).
 
 ## Introduction
 
-keys.pub is a [library](/docs/lib/), [command line utility](/docs/cli/) and [desktop app](/docs/desktop/install.md) that manages cryptographic keys, sigchains and user identities.
+Key management is hard.
+
+keys.pub is a [go library](/docs/lib/), [desktop app](/docs/desktop/install.md), [command line utility](/docs/cli/) and [REST API](/docs/restapi/) that manages cryptographic keys, sigchains and user identities.
 
 ```shell
 > keys pull gabriel@github
 kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
 
-> echo "hi 🤓" | keys encrypt -stdin -stdout -armor -recipient gabriel@github
+> echo "hi 🤓" | keys encrypt -recipient gabriel@github -armor -stdin -stdout
 BEGIN SALTPACK ENCRYPTED MESSAGE. kcJn5brvybfNjz6 D5ll2Nk0Z2co0as ...
 ```
 
-(The above example pulls the public key for the Github user gabriel, verifies it and creates an encrypted message from stdin to stdout.)
+_The above example pulls the public key for the Github user gabriel, verifies it and creates an encrypted message._
 
 The default key is a [Curve25519 key (EdX25519)](/docs/specs/keys.md) capable of signing and encryption.
 Using this key, you can create a [sigchain](/docs/specs/sigchain.md) (an ordered sequence of signed statements).
@@ -41,8 +48,8 @@ Your keys are protected by a [keyring](docs/specs/keyring.md) which is secured b
 
 The `keysd` daemon runs as a [gRPC service](/docs/service.md) on your computer.
 
+- [Desktop App](/docs/desktop/install.md)
 - [Command Line](/docs/cli/)
-- [Desktop App](/docs/desktop/)
 - [REST API](/docs/restapi/)
 - [Library](/docs/lib/)
 - [Specs](/docs/specs/)
