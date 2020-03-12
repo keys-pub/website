@@ -2,7 +2,7 @@
 
 ## `keys encrypt`
 
-Encrypt text to armored msg.enc (from stdin).
+Encrypt text to armored msg.enc (from stdin to stdout).
 
 Specify a key id or user name@service as recipients.
 
