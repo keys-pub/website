@@ -30,7 +30,8 @@ Encrypt image.png to image.png.enc (using stdin and stdout).
 > cat image.png | keys encrypt \
 -sender kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
 -recipient kex1ts0qw8fwkvle2f2xsqumetmr9ev5ppx22rl5hnycen68sanjzl7qnta629 \
--recipient kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c > image.png.enc
+-recipient kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
+-stdin -stdout > image.png.enc
 ```
 
 ## `keys decrypt`
@@ -38,7 +39,7 @@ Encrypt image.png to image.png.enc (using stdin and stdout).
 Decrypt from (from stdin).
 
 ```shell
-> cat msg.enc | keys decrypt -armor
+> cat msg.enc | keys decrypt -armor -stdin -stdout
 
 verified kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c gabriel@github
 My secret 🤓

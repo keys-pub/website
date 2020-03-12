@@ -51,14 +51,31 @@ if err := ks.SaveKey(bob); err != nil {
 
 // Bob decrypts the saltpack message.
 sp := saltpack.NewSaltpack(ks)
-out, signer, err := sp.DecryptArmored(encrypted)
+out, sender, err := sp.DecryptArmored(encrypted)
 if err != nil {
     log.Fatal(err)
 }
-// The signer from Saltpack Decrypt is a x25519 ID, so compare using
+
+// The sender from Saltpack Decrypt is a x25519 ID, so compare using
 // keys.PublicKeyIDEquals.
-if keys.PublicKeyIDEquals(aliceID, signer) {
-    fmt.Printf("signer is alice\n")
+if keys.PublicKeyIDEquals(aliceID, sender) {
+    fmt.Printf("sender is alice\n")
 }
+
 fmt.Printf("%s\n", string(out))
 ```
+
+<!-- if err := ks.SavePublicKey(aliceID); err != nil {
+    log.Fatal(err)
+}
+
+if sender != nil {
+    // The sender from Saltpack Decrypt is a x25519 public key, so find the corresponding edx25519 key.
+    pk, err := ks.FindEdX25519PublicKey(sender.ID())
+    if err != nil {
+        log.Fatal(err)
+    }
+    if pk != nil && pk.ID() == aliceID {
+        fmt.Printf("signer is alice\n")
+    }
+} -->
