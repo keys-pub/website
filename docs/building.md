@@ -3,7 +3,7 @@
 There are 2 binaries, the service `keysd` and the client `keys`.
 
 ```shell
-GO111MODULE=on go install github.com/keys-pub/keysd
+GO111MODULE=on go install github.com/keys-pub/keysd/service/keysd
 GO111MODULE=on go install github.com/keys-pub/keysd/service/keys
 ```
 
