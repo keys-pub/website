@@ -6,4 +6,4 @@ This format uses NaCl's box and secretbox constructions and provides authenticit
 
 See [saltpack.org](https://saltpack.org) for more details on this format.
 
-Use the command line: [keys encrypt](../cli/encrypt.md).
+Use the command line: [keys encrypt](/docs/cli/encrypt.md).

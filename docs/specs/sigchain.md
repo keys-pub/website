@@ -21,17 +21,17 @@ This is compatible as a JSON canonical format (ordered keys, no whitespace, with
 | seq    | int    | Sequence number, starting at 1 for the root statement.                                            |
 | revoke | int    | (Optional) Sequence number of a statement to revoke.                                              |
 | ts     | int    | (Optional) Timestamp, number of milliseconds since 1 January 1970 00:00 UTC.                      |
-| type   | string | (Optional) Statement type ("", "revoke", "user").                                          |
+| type   | string | (Optional) Statement type ("", "revoke", "user").                                                 |
 
 The format for a statement:
 
-```text
+```
 {".sig":"<base64 signature>","kid":"<kid>","data":"<base64 data>","prev":"<base64 prev hash>","seq":<integer>,"ts":<integer>}
 ```
 
 The format for a revoke statement:
 
-```text
+```
 {".sig":"<base64 signature>","kid":"<kid>","prev":"<base64 prev hash>","prev":"<base64 prev hash>","revoke":<integer>,"seq":<integer>,"ts":<integer>,"type":"revoke"}
 ```
 
@@ -43,7 +43,7 @@ The signature (`.sig`) is the signature bytes (base64 encoded) of the specific s
 
 The specific serialization (or the bytes to sign) is the statement without the ".sig" value:
 
-```text
+```
 {".sig":"","data":"<base64 data>","kid":"<kid>","prev":"<base64 prev hash>","seq":<integer>,"ts":<integer>,"type":"<type>"}
 ```
 
@@ -56,4 +56,4 @@ See [How (not) to sign a JSON object](https://latacora.micro.blog/2019/07/24/how
 
 ### REST API
 
-You can access sigchains via the [/sigchain](../restapi/sigchain.md) API.
+You can access sigchains via the [/sigchain](/docs/restapi/sigchain.md) API.

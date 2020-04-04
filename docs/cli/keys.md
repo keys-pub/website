@@ -100,7 +100,7 @@ Export a key.
 > keys export kex17hy4kxhdrzj2fs03pljxph4d0qcmlvt4zl5fw9mxcpga3ga0kpvs0mq6wu
 ```
 
-```text
+```
 BEGIN EDX25519 KEY MESSAGE.
 QelLAF802uFpN7H JX4w8wOChAK1yWy U1cwY9jZv1CqHln yNdbI38AZ1wzrvK
 vxiZuXPdypPZNu0 zfDU7X747YQHORI mFCqoE19SrG4VEB GlHuYiwLBGcuugm
@@ -116,6 +116,6 @@ Import a key.
 > keys import -in key.txt
 ```
 
-```txt
+```
 > keys export kex17hy4kxhdrzj2fs03pljxph4d0qcmlvt4zl5fw9mxcpga3ga0kpvs0mq6wu
 ```

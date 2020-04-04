@@ -56,10 +56,16 @@ if err != nil {
     log.Fatal(err)
 }
 
-// The sender from Saltpack Decrypt is a x25519 ID, so compare using
-// keys.PublicKeyIDEquals.
-if keys.PublicKeyIDEquals(aliceID, sender) {
-    fmt.Printf("sender is alice\n")
+// The sender from Saltpack Decrypt is a X25519 public key, so find the
+// corresponding EdX25519 public key.
+if sender != nil {
+    pk, err := ks.FindEdX25519PublicKey(sender.ID())
+    if err != nil {
+        log.Fatal(err)
+    }
+    if pk != nil && pk.ID() == aliceID {
+        fmt.Printf("signer is alice\n")
+    }
 }
 
 fmt.Printf("%s\n", string(out))
