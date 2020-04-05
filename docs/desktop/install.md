@@ -6,6 +6,8 @@
 
 _Linux coming soon._
 
+Or the [command line only](/docs/cli/install.md).
+
 ### Resources
 
 - [Command Line](cli.md)

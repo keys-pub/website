@@ -20,7 +20,7 @@ Or the [command line only](/docs/cli/install.md).
 
 Key management is hard.
 
-keys.pub is a [go library](/docs/lib/), [desktop app](/docs/desktop/install.md), [command line utility](/docs/cli/) and [REST API](/docs/restapi/) that manages cryptographic keys, sigchains and user identities. It integrates with other frameworks to provide signing and encryption, such as [Saltpack](https://saltpack.org) or [Noise Protocol](https://noiseprotocol.org/).
+keys.pub is an app that manages cryptographic keys, sigchains and user identities. It integrates with other frameworks to provide signing and encryption, such as [Saltpack](https://saltpack.org) or [Noise Protocol](https://noiseprotocol.org/).
 
 ```shell
 > keys pull gabriel@github
@@ -47,10 +47,10 @@ Your keys are protected by a [keyring](/docs/specs/keyring.md) which is secured 
 The `keysd` daemon runs as a [gRPC service](/docs/specs/service.md) on your computer.
 
 - [Desktop App](/docs/desktop/install.md)
-- [Command Line](/docs/cli/)
-- [REST API](/docs/restapi/)
-- [Library](/docs/lib/)
-- [Specs](/docs/specs/)
+- [Command Line](/docs/cli-index.md)
+- [REST API](/docs/restapi-index.md)
+- [Library](/docs/lib-index.md)
+- [Specs](/docs/specs-index.md)
 
 <img src="./app.png"/>
 

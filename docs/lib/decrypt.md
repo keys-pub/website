@@ -1,6 +1,6 @@
 # Decrypt
 
-The following example decrypts the message from the [encrypt](encrypt.md) example:
+The following example decrypts the message from the [Encrypt](encrypt.md) example:
 
 - Initialize and setup/unlock a Keyring
 - Create a Keystore

@@ -1,28 +1,37 @@
-# Noise Protocol
+# Noise
 
-The following completes a handshake for a X25519Key Alice and Bob, and
+The following example completes a handshake using two X25519 keys (Alice and Bob), and
 uses the cipher to encrypt and decrypt.
 
 The default cipher suite used is:
 Curve25519 ECDH, ChaCha20-Poly1305 AEAD, BLAKE2b hash.
 
 The handshake uses the KK pattern:
-K = Static key for initiator Known to responder
-K = Static key for responder Known to initiator
+
+- K = Static key for initiator Known to responder
+- K = Static key for responder Known to initiator
 
 One of the Noise participants should be the initiator.
 
 The order of the handshake writes/reads should be:
-(1) Initiator: Write
-(2) Responder: Read
-(3) Initiator: Read
-(4) Responder: Write
+
+- (1) Initiator: Write
+- (2) Responder: Read
+- (3) Initiator: Read
+- (4) Responder: Write
 
 When the handshake is complete, use the Cipher to Encrypt/Decrypt.
 
 See [noisprotocol.org](http://www.noiseprotocol.org) for more info.
 
 ```go
+import (
+    "github.com/keys-pub/keys"
+    "github.com/keys-pub/keys/noise"
+)
+
+...
+
 alice := keys.GenerateX25519Key()
 bob := keys.GenerateX25519Key()
 

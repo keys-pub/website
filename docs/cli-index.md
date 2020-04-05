@@ -1,5 +1,9 @@
 # Command Line
 
+::: warning
+This documentation is in progress.
+:::
+
 ## Install
 
 - [How to install the command line](/docs/desktop/cli.md) (from the desktop app)

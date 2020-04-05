@@ -1,5 +1,9 @@
 # Specs
 
+::: warning
+This documentation is in progress.
+:::
+
 - [Auth](auth.md)
 - [Keys](keys.md)
 - [Encryption](encrypt.md)

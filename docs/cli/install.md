@@ -4,7 +4,7 @@ _The desktop app comes with the command line, but if you want to install only th
 
 To manually build the binaries, see [building from source](building.md).
 
-Or are you looking for [command line usage](/docs/cli/)?
+Or are you looking for [command line usage](/docs/cli-index.md)?
 
 ## macOS
 
