@@ -10,9 +10,9 @@ This project is in development and has not been audited. Don't use for anything 
 
 ## Install
 
-[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.27/Keys-0.0.27.dmg)
+[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.28/Keys-0.0.28.dmg)
 
-[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.27/Keys-0.0.27.msi)
+[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.28/Keys-0.0.28.msi)
 
 Or the [command line only](/docs/cli/install.md).
 
@@ -20,7 +20,7 @@ Or the [command line only](/docs/cli/install.md).
 
 Key management is hard.
 
-keys.pub is an app that manages cryptographic keys, sigchains and user identities. It integrates with other frameworks to provide signing and encryption, such as [Saltpack](https://saltpack.org) or [Noise Protocol](https://noiseprotocol.org/).
+keys.pub is an app and service that manages cryptographic keys, sigchains and user identities. It integrates with other frameworks to provide signing and encryption, such as [Saltpack](https://saltpack.org) or [Noise Protocol](https://noiseprotocol.org/).
 
 ```shell
 > keys pull gabriel@github
