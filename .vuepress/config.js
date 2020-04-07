@@ -155,8 +155,8 @@ module.exports = {
         collapsable: false,
         path: "/docs/lib-index",
         children: [
-          "/docs/lib/encrypt",
-          "/docs/lib/decrypt",
+          "/docs/lib/keyring",
+          "/docs/lib/saltpack",
           "/docs/lib/noise",
           "/docs/lib/packages",
         ],
@@ -168,7 +168,6 @@ module.exports = {
         children: [
           "/docs/specs/auth",
           "/docs/specs/keys",
-          "/docs/specs/encrypt",
           "/docs/specs/kid",
           "/docs/specs/keyring",
           "/docs/specs/sigchain",

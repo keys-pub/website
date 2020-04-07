@@ -4,11 +4,10 @@
 This documentation is in progress.
 :::
 
-- [Auth](auth.md)
-- [Keys](keys.md)
-- [Encryption](encrypt.md)
-- [Key Identifiers](kid.md)
-- [Keyring](keyring.md)
-- [Sigchain](sigchain.md)
-- [User](user.md)
-- [Wormhole](wormhole.md)
+- [Auth](/docs/specs/auth.md)
+- [Keys](/docs/specs/keys.md)
+- [Key Identifiers](/docs/specs/kid.md)
+- [Keyring](/docs/specs/keyring.md)
+- [Sigchain](/docs/specs/sigchain.md)
+- [User](/docs/specs/user.md)
+- [Wormhole](/docs/specs/wormhole.md)
