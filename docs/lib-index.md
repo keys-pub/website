@@ -15,7 +15,7 @@ keys.pub provides Go packages to:
 ## Examples
 
 - [Keyring](/docs/lib/keyring.md): Setup/unlock a Keyring.
-- [Encrypt (Saltpack)](/docs/lib/saltpack.md#encrypt): Create a Keystore, generate an EdX25519 key, and encrypt to recipients using Saltpack.
+- [Encrypt (Saltpack)](/docs/lib/saltpack.md#encrypt): Create a KeyStore, generate an EdX25519 key, and encrypt to recipients using Saltpack.
 - [Decrypt (Saltpack)](/docs/lib/saltpack.md#decrypt): Import a key, and decrypt a Saltpack armored message.
 - [Sign (Saltpack)](/docs/lib/saltpack.md#sign): Create a Saltpack signed message.
 - [Verify (Saltpack)](/docs/lib/saltpack.md#verify): Verify a Saltpack signed message.
