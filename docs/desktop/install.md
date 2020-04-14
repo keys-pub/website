@@ -1,8 +1,8 @@
 # Install
 
-[Download for macOS (0.0.28)](https://github.com/keys-pub/app/releases/download/v0.0.28/Keys-0.0.28.dmg)
+[Download for macOS (0.0.31)](https://github.com/keys-pub/app/releases/download/v0.0.31/Keys-0.0.31.dmg)
 
-[Download for Windows (0.0.28)](https://github.com/keys-pub/app/releases/download/v0.0.28/Keys-0.0.28.msi)
+[Download for Windows (0.0.31)](https://github.com/keys-pub/app/releases/download/v0.0.31/Keys-0.0.31.msi)
 
 _Linux coming soon._
 

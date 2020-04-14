@@ -10,9 +10,9 @@ This project is in development and has not been audited. Don't use for anything 
 
 ## Install
 
-[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.28/Keys-0.0.28.dmg)
+[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.31/Keys-0.0.31.dmg)
 
-[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.28/Keys-0.0.28.msi)
+[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.31/Keys-0.0.31.msi)
 
 Or the [command line only](/docs/cli/install.md).
 
