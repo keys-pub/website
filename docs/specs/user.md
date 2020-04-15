@@ -9,7 +9,7 @@ The steps are:
 
 1. Generate a user signed statement (saltpack armored) with the name, service and key identifier.
 2. Place the statement on the service at an URL controlled by the account.
-3. Save a signed statement in the key's sigchain including name, service, key identifier and the url from step 2.
+3. Save a signed statement in the key's sigchain ([PUT /sigchain/:kid/:seq](/docs/restapi/sigchain.md#put-sigchain-kid-seq)) including name, service, key identifier and url from step 2.
 
 ## Statement
 

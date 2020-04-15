@@ -40,5 +40,5 @@ curl -X PUT -d '{".sig":"RZhVfrd6IpHFdUbn3hmxKh0UQpzjdkRPBZHE3Ag8sZHOqGvDG1wfRKZ
 https://keys.pub/sigchain/kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c/1
 ```
 
-It must be a valid signed sigchain statement by the sign key. If it exists already, returns 409 error.
-The max size for the msg is 16KB.
+It must be a valid signed sigchain statement by the specified key. If it exists already, returns 409 error.
+The max size for a signed message is 16KB.
