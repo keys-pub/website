@@ -6,11 +6,11 @@ title: keys.pub - Cryptographic key management, sigchains, user identities, sign
 
 ## Install
 
-[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.33/Keys-0.0.33.dmg)
+[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.35/Keys-0.0.35.dmg)
 
-[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.33/Keys-0.0.33.msi)
+[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.35/Keys-0.0.35.msi)
 
-[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.33/Keys-0.0.33.AppImage)
+[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.35/Keys-0.0.35.AppImage)
 
 Or the [command line only](/docs/cli/install.md).
 
