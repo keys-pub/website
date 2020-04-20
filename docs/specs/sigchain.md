@@ -10,11 +10,12 @@ A [Statement](https://godoc.org/github.com/keys-pub/keys#Statement) describes si
 
 ### Format
 
-This is compatible as a JSON canonical format (ordered keys, no whitespace, with only string and integer values).
+This is compatible as a JSON canonical format (ordered keys, no whitespace, with only string and integer values) with
+the signature in the beginning to make it easy to extract without having to parse JSON.
 
 | Field  | Type   | Description                                                                                       |
 | ------ | ------ | ------------------------------------------------------------------------------------------------- |
-| .sig   | string | Signature (base64 encoded).                                                                       |
+| .sig   | string | Signature (64 bytes, base64 encoded with padding, always 88 characters).                          |
 | data   | string | Data (base64 encoded).                                                                            |
 | kid    | string | Key id used to sign.                                                                              |
 | prev   | string | Hash (SHA-256, base64 encoded) of previous sigchain statement, or omitted for the root statement. |
@@ -32,14 +33,12 @@ The format for a statement:
 The format for a revoke statement:
 
 ```
-{".sig":"<base64 signature>","kid":"<kid>","prev":"<base64 prev hash>","prev":"<base64 prev hash>","revoke":<integer>,"seq":<integer>,"ts":<integer>,"type":"revoke"}
+{".sig":"<base64 signature>","kid":"<kid>","prev":"<base64 prev hash>","revoke":<integer>,"seq":<integer>,"ts":<integer>,"type":"revoke"}
 ```
 
 ### Signature
 
-The signature (`.sig`) is the signature bytes (base64 encoded) of the specific serialization.
-
-### Specific Serialization
+The signature (`.sig`) is the signature bytes (64 bytes, base64 encoded, padded, 88 characters) of the specific serialization.
 
 The specific serialization (or the bytes to sign) is the statement without the ".sig" value:
 
@@ -50,9 +49,15 @@ The specific serialization (or the bytes to sign) is the statement without the "
 ### Verifying the Signature
 
 It is important to verify the bytes match the specific serialization.
-You can do this by stripping out the .sig value, which is the characters in the range [9:97], and verifying the signature on those bytes.
+You can do this by stripping out the .sig value in the range [9:97] and then verifying the signature on those bytes.
+This .sig is always 88 characters (64 bytes, base64 encoded with padding) in this range at the beginning of the statement.
 
-See [How (not) to sign a JSON object](https://latacora.micro.blog/2019/07/24/how-not-to.html).
+```
+Sig = b[9:97]
+BytesToSign = b[0:9] + b[97:]
+```
+
+See [How (not) to sign a JSON object](https://latacora.micro.blog/2019/07/24/how-not-to.html) on why this is important.
 
 ### REST API
 

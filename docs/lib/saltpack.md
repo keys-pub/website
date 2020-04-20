@@ -73,7 +73,7 @@ kr, err := keyring.NewKeyring("BobKeyring", keyring.System())
 if err != nil {
     log.Fatal(err)
 }
-if err := keyring.UnlockWithPassword(kr, "bobpassword"); err != nil {
+if err := keyring.SetupWithPassword(kr, "keys.pub", "bobpassword"); err != nil {
     log.Fatal(err)
 }
 ks := keys.NewKeyStore(kr)
