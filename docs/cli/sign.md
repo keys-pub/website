@@ -2,51 +2,46 @@
 
 ## `keys sign`
 
-Sign from stdin to stdout (armored).
-
 ```shell
-> echo -n "I'm alice 🤓" | keys sign -stdin -stdout -armor \
--signer kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c > msg.sig
+# Sign image.png to image.png.sig
+keys sign -signer gabriel@github -in image.png
+keys sign -s gabriel@github -i image.png
+
+# Verify image.png
+keys verify -s gabriel@github -i image.png
 ```
 
-Sign image.png to image.png.sig.
-
 ```shell
-> keys sign -signer kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c \
--in image.png -out image.png.sig
+# Create a signed message (from stdin)
+echo -n "I'm gabriel on Github 🤓" | keys sign -s gabriel@github > msg.signed
+
+# Verify signed message to stdout
+cat msg.signed | keys verify -signer gabriel@github
+I'm gabriel on Github 🤓
 ```
 
-Sign image.png to image.png.sig (from stdin to stdout).
-
 ```shell
-> cat image.png | keys sign -stdin -stdout \
--signer kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c > image.png.sig
+# Sign image.png to image.png.signed (binary, signature is attached)
+keys sign -s gabriel@github -i image.png -m binary,attached
+
+# Verify attached signed message image.png.signed to image.png.
+keys verify -s gabriel@github -i image.png.signed -m binary,attached
 ```
 
 ## `keys verify`
 
-Verify from stdin to stdout (armored).
-
 ```shell
-> cat msg.sig | keys verify -stdin -stdout -armor \
--signer kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
-
-I'm alice 🤓
+# Verify image.png
+keys verify -in image.png -signer gabriel@github
 ```
 
-Verify from file to stdout.
-
 ```shell
-> keys verify -armor -in msg.sig -stdout
-
-verified kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c gabriel@github
-I'm alice 🤓
+# Verify signed message to stdout
+cat msg.signed | keys verify -signer gabriel@github
+I'm gabriel on Github 🤓
 ```
 
-Verify image.png.sig to image.png.
-
 ```shell
-> keys verify -in image.png.sig -out image.png
-
-verified kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c gabriel@github
+# Verify attached signed message image.png.signed to image.png.
+keys verify -s gabriel@github -i image.png.signed -m binary,attached
 ```
