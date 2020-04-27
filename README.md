@@ -20,7 +20,7 @@ Or the [command line only](/docs/cli/install.md).
 - [Search for keys](/docs/restapi/user.md#get-user-search), verify and import them.
 - Securely store passwords and secrets.
 - Encrypt, decrypt, sign, verify.
-- Create a secure connection ([Wormhole](/docs/specs/wormhole)) between 2 computers.
+- Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers.
 - Most features available in both the app and on the command line.
 - 100% open source ([github.com/keys-pub](http://github.com/keys-pub)) and cross platform (macOS, Windows, Linux).
 - _Coming soon:_ Backup keys/secrets to your private self-hosted storage on S3, GCP, etc.
