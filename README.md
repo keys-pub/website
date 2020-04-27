@@ -41,7 +41,7 @@ The default key is a [Ed25519/X25519 key](/docs/specs/keys.md) capable of signin
 
 We can [link this key](/docs/specs/user.md) to your identity on Github, Twitter, Reddit, etc, by creating a signed statement and publishing it both there and on your sigchain. (You can revoke by removing either statement.)
 
-You can [search for keys](/docs/restapi/user.md#get-user-search) by user name and service (e.g. `gabriel@github`, `gabrlh@twitter`), or [lookup a user](/docs/restapi/user.md#get-user-kid) by a key identifier using a [REST API](/docs/restapi-index).
+You can [search for keys](/docs/restapi/user.md#get-user-search) by user name and service (e.g. `gabriel@github`, `gabrlh@twitter`), or [lookup a user](/docs/restapi/user.md#get-user-kid) by a key identifier using a [REST API](/docs/restapi-index.html).
 
 The [Saltpack](https://saltpack.org) format is used for signing and encryption, providing authenticity, repudability and anonymity.
 
