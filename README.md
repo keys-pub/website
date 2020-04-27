@@ -23,8 +23,8 @@ Or the [command line only](/docs/cli/install.md).
 - Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers.
 - Most features available in both the app and on the command line.
 - 100% open source ([github.com/keys-pub](http://github.com/keys-pub)) and cross platform (macOS, Windows, Linux).
-- _Coming soon:_ Backup keys/secrets to your private self-hosted storage on S3, GCP, etc.
-- _Coming soon:_ Support for hardware keys.
+- _Coming soon:_ Backup keys/secrets to your private self-hosted storage on S3, GCP, Dropbox, etc.
+- _Coming soon:_ Support for hardware keys like [SoloKeys](https://solokeys.com/), YubiKeys, FIDO2.
 - _Coming soon:_ Mobile apps.
 
 <img src="./app-encrypt.jpg"/>
