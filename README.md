@@ -6,11 +6,11 @@ title: keys.pub - Cryptographic key management, sigchains, user identities, sign
 
 ## Install
 
-[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.35/Keys-0.0.35.dmg)
+[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.36/Keys-0.0.36.dmg)
 
-[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.35/Keys-0.0.35.msi)
+[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.36/Keys-0.0.36.msi)
 
-[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.35/Keys-0.0.35.AppImage)
+[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.36/Keys-0.0.36.AppImage)
 
 Or the [command line only](/docs/cli/install.md).
 
@@ -19,7 +19,7 @@ Or the [command line only](/docs/cli/install.md).
 - Manage cryptographic [keys](/docs/specs/keys.md), [sigchains](/docs/specs/sigchain.md) and [user identities](/docs/specs/user.md).
 - [Search for keys](/docs/restapi/user.md#get-user-search), verify and import them.
 - Securely store passwords and secrets.
-- Encrypt, decrypt, sign, verify.
+- [Encrypt, decrypt](/docs/cli/encrypt.md), [sign, verify](/docs/cli/sign.md).
 - Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers.
 - Most features available in both the app and on the command line.
 - 100% open source ([github.com/keys-pub](http://github.com/keys-pub)) and cross platform (macOS, Windows, Linux).
@@ -54,10 +54,10 @@ Your keys and secrets are protected by a [keyring](/docs/specs/keyring.md) which
 The app and command line utility connect to a `keysd` daemon runs as a [gRPC service](/docs/specs/service.md) on your computer.
 
 ```shell
-> keys pull gabriel@github
+keys pull gabriel@github
 kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
 
-> echo "hi 🤓" | keys encrypt -recipient gabriel@github -armor -stdin -stdout
+> echo "hi 🤓" | keys encrypt -a -r gabriel@github
 BEGIN SALTPACK ENCRYPTED MESSAGE. kcJn5brvybfNjz6 D5ll2Nk0Z2co0as ...
 ```
 

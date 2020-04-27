@@ -4,10 +4,10 @@
 This documentation is in progress.
 :::
 
-## Install
+## Setup
 
-- [How to install the command line](/docs/desktop/cli.md) (from the desktop app)
-- [How to install the command line](/docs/cli/install.md) (only)
+- [Command Line from the Desktop App](/docs/desktop/cli.md)
+- [How to install the only the command line](/docs/cli/install.md)
 
 ## Usage
 

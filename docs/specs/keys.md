@@ -23,7 +23,7 @@ fmt.Printf("%s\n", alice.ID())
 ```
 
 ```shell
-> keys generate -t edx25519
+keys generate -t edx25519
 kex1m8nd23chn6jg6c2r0rf5xhlawp2g6qwvkj5zc9val5f76enlfszstqerxm
 ```
 
@@ -42,6 +42,6 @@ fmt.Printf("%s\n", bob.ID())
 ```
 
 ```shell
-> keys generate -t x25519
+keys generate -t x25519
 kbx18e99hurn8fly3lls0v53jn9qzduey87l4vya0amjylvpvmfhkdaqtfc2v7
 ```

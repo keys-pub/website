@@ -12,7 +12,7 @@ The first time you run `keys auth`, it will ask you to setup a password.
 Running `keys auth` gives you a token which is available for the life of the local service process.
 
 ```shell
-> keys auth
+keys auth
 
 OK, let's create a password.
 Create a password:

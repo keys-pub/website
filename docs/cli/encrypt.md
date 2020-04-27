@@ -17,7 +17,7 @@ Encrypt image.png to image.png.enc.
 Sender is optional, if unspecified, is anonymous.
 
 ```shell
-keys encrypt -recipient gabriel@github -in image.png
+keys encrypt -r gabriel@github -i image.png
 ```
 
 ## `keys decrypt`
@@ -25,7 +25,7 @@ keys encrypt -recipient gabriel@github -in image.png
 Decrypt from (from stdin).
 
 ```shell
-cat msg.enc | keys decrypt -armor
+cat msg.enc | keys decrypt -a
 
 verified kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c gabriel@github
 My secret 🤓
