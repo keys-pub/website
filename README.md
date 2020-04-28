@@ -6,11 +6,11 @@ title: keys.pub - Cryptographic key management, sigchains, user identities, sign
 
 ## Install
 
-[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.36/Keys-0.0.36.dmg)
+[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.37/Keys-0.0.37.dmg)
 
-[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.36/Keys-0.0.36.msi)
+[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.37/Keys-0.0.37.msi)
 
-[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.36/Keys-0.0.36.AppImage)
+[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.37/Keys-0.0.37.AppImage)
 
 Or the [command line only](/docs/cli/install.md).
 
@@ -19,8 +19,8 @@ Or the [command line only](/docs/cli/install.md).
 - Manage cryptographic [keys](/docs/specs/keys.md), [sigchains](/docs/specs/sigchain.md) and [user identities](/docs/specs/user.md).
 - [Search for keys](/docs/restapi/user.md#get-user-search), verify and import them.
 - Securely store passwords and secrets.
-- [Encrypt, decrypt](/docs/cli/encrypt.md), [sign, verify](/docs/cli/sign.md).
-- Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers.
+- [Encrypt, decrypt](/docs/cli/encrypt.md), [sign, verify](/docs/cli/sign.md) (using [Saltpack](https://saltpack.org)).
+- Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers (using [Noise](https://noiseprotocol.org/)).
 - Most features available in both the app and on the command line.
 - 100% open source ([github.com/keys-pub](http://github.com/keys-pub)) and cross platform (macOS, Windows, Linux).
 - _Coming soon:_ Backup keys/secrets to your private self-hosted storage on S3, GCP, Dropbox, etc.
@@ -35,6 +35,10 @@ Or the [command line only](/docs/cli/install.md).
 This project is in development and has not been audited.
 :::
 
+## Why?
+
+Key management is hard. We need tools, libraries, apps and documentation to help us.
+
 ## How does it work?
 
 The default key is a [Ed25519/X25519 key](/docs/specs/keys.md) capable of signing and encryption.
@@ -45,7 +49,7 @@ You can [search for keys](/docs/restapi/user.md#get-user-search) by user name an
 
 The [Saltpack](https://saltpack.org) format is used for signing and encryption, providing authenticity, repudability and anonymity.
 
-The [Noise Protocol](https://noiseprotocol.org/) is used to create a secure connection between two keys.
+The [Noise Protocol](https://noiseprotocol.org/) is used to create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers/keys.
 
 [Key identifiers](/docs/specs/kid.md) are [Bech32 format](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki), encode the type of key and public key bytes, and include a checksum with error correction.
 
