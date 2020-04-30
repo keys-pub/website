@@ -1,16 +1,16 @@
 ---
-title: keys.pub - Cryptographic key management, sigchains, user identities, signing, encryption, password manager.
+title: keys.pub - Cryptographic key management, sigchains, user identities, signing, encryption, password manager, FIDO2
 ---
 
 <img src="./logo.png" width="280"/>
 
 ## Install
 
-[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.37/Keys-0.0.37.dmg)
+[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.38/Keys-0.0.38.dmg)
 
-[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.37/Keys-0.0.37.msi)
+[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.38/Keys-0.0.38.msi)
 
-[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.37/Keys-0.0.37.AppImage)
+[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.38/Keys-0.0.38.AppImage)
 
 Or the [command line only](/docs/cli/install.md).
 
