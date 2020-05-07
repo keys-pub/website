@@ -43,7 +43,7 @@ Key management is hard. We need tools, libraries, apps and documentation to help
 
 The default key is a [Ed25519/X25519 key](/docs/specs/keys.md) capable of signing and encryption.
 
-We can [link this key](/docs/specs/user.md) to your identity on Github, Twitter, Reddit, etc, by creating a signed statement and publishing it both there and on your sigchain. (You can revoke by removing either statement.)
+We can [link this key](/docs/specs/user.md) to your identity on Github, Twitter, Reddit, etc, by creating a signed statement and publishing it both there and on your sigchain. (You can either revoke the sigchain statement or remove the signed statement to "unlink".)
 
 You can [search for keys](/docs/restapi/user.md#get-user-search) by user name and service (e.g. `gabriel@github`, `gabrlh@twitter`), or [lookup a user](/docs/restapi/user.md#get-user-kid) by a key identifier using a [REST API](/docs/restapi-index.html).
 
