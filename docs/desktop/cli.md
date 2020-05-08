@@ -20,6 +20,12 @@ TODO
 
 ## Linux
 
+Add the following lines to your .bashrc(or equivalent file)
+
 ```
-TODO
+alias keys="/tmp/.mount_Keys-*/resources/bin/keys"
+alias keysd="/tmp/.mount_Keys-*/resources/bin/keysd"
 ```
+
+* You should keep the AppImage open in the background
+* There might be unintended consequences to having multiple AppImages open in the background
