@@ -27,5 +27,5 @@ alias keys="/tmp/.mount_Keys-*/resources/bin/keys"
 alias keysd="/tmp/.mount_Keys-*/resources/bin/keysd"
 ```
 
-* You should keep the AppImage open in the background
-* There might be unintended consequences to having multiple AppImages open in the background
+* You should preferably keep the AppImage open in the background (it seems to work when not open but has not been tested for all possible cases)
+* There *might* be unintended consequences to having multiple AppImages open in the background 
