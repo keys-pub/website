@@ -6,8 +6,7 @@ This documentation is in progress.
 
 ## Setup
 
-- [Command Line from the Desktop App](/docs/desktop/cli.md)
-- [How to install the only the command line](/docs/cli/install.md)
+- [How to install the the command line](/docs/cli/install.md)
 
 ## Usage
 

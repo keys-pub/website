@@ -1,14 +1,18 @@
 # Install
 
-_The desktop app comes with the command line, but if you want to install only the command line, you are in the right place._
+Are you looking for [command line usage](/docs/cli-index.md) instead?
 
 To manually build the binaries, see [building from source](building.md).
 
-Or are you looking for [command line usage](/docs/cli-index.md)?
-
 ## macOS
 
-To install via [homebrew](https://brew.sh/):
+The desktop app install installs the command line on first run:
+
+```shell
+ln -s /Applications/Keys.app/Contents/Resources/bin/keys /usr/local/bin/keys
+```
+
+Or you can install just the command line via [homebrew](https://brew.sh/):
 
 ```shell
 brew tap keys-pub/tap
