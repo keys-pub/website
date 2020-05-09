@@ -47,3 +47,7 @@ wget -qO - https://storage.googleapis.com/aptly.keys.pub/keys.asc | sudo apt-key
 sudo apt-get update
 sudo apt-get install keys
 ```
+
+## Arch Linux
+
+Available in the AUR as [keys-pub-git](https://aur.archlinux.org/packages/keys-pub-git/)
