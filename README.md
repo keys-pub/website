@@ -6,11 +6,11 @@ title: keys.pub - Cryptographic key management, sigchains, user identities, sign
 
 ## Install
 
-[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.39/Keys-0.0.39.dmg)
+[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.43/Keys-0.0.43.dmg)
 
-[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.39/Keys-0.0.39.msi)
+[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.43/Keys-0.0.43.msi)
 
-[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.39/Keys-0.0.39.AppImage)
+[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.43/Keys-0.0.43.AppImage)
 
 Or the [command line only](/docs/cli/install.md).
 
@@ -21,7 +21,7 @@ Or the [command line only](/docs/cli/install.md).
 - Securely store passwords and secrets.
 - [Encrypt, decrypt](/docs/cli/encrypt.md), [sign, verify](/docs/cli/sign.md) (using [Saltpack](https://saltpack.org)).
 - Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers (using [Noise](https://noiseprotocol.org/)).
-- Most features available in both the app and on the command line.
+- Most features are available in both the app and on the command line.
 - 100% open source ([github.com/keys-pub](http://github.com/keys-pub)) and cross platform (macOS, Windows, Linux).
 - _Coming soon:_ Backup keys/secrets to your private self-hosted storage on S3, GCP, Dropbox, etc.
 - _Coming soon:_ Support for hardware keys like [SoloKeys](https://solokeys.com/), YubiKeys, FIDO2.
@@ -55,7 +55,7 @@ The [Noise Protocol](https://noiseprotocol.org/) is used to create a secure conn
 
 Your keys and secrets are protected by a [keyring](/docs/specs/keyring.md) which is secured by both the OS and a user supplied password.
 
-The app and command line utility connect to a `keysd` daemon runs as a [gRPC service](/docs/specs/service.md) on your computer.
+The app and command line utility connect to a `keysd` daemon thats runs as a [gRPC service](/docs/specs/service.md) on your computer.
 
 ```shell
 keys pull gabriel@github
@@ -77,7 +77,7 @@ _The above example pulls the public key for the Github user gabriel, verifies it
 
 ### Go Libraries
 
-All the features in the app is available through Go libraries.
+All the features in the app are available through Go libraries.
 
 [See some examples](/docs/lib-index.md)
 

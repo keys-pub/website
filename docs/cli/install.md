@@ -6,13 +6,15 @@ To manually build the binaries, see [building from source](building.md).
 
 ## macOS
 
-The desktop app install installs the command line on first run:
+The desktop app installs the command line on first run:
 
 ```shell
 ln -s /Applications/Keys.app/Contents/Resources/bin/keys /usr/local/bin/keys
 ```
 
-Or you can install just the command line via [homebrew](https://brew.sh/):
+### Homebrew
+
+Via [homebrew](https://brew.sh/):
 
 ```shell
 brew tap keys-pub/tap
@@ -20,6 +22,18 @@ brew install keys
 ```
 
 ## Windows
+
+::: warning
+The scoop install will conflict with the desktop app. Fix is in progress.
+:::
+
+The desktop app ships with the command line utilities, you can add it to your %PATH%:
+
+```shell
+%USERPROFILE%\AppData\Local\Programs\keys\resources\bin
+```
+
+### Scoop
 
 To install via [scoop](https://scoop.sh/):
 

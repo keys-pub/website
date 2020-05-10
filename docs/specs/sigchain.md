@@ -21,7 +21,7 @@ the signature in the beginning to make it easy to extract without having to pars
 | prev   | string | Hash (SHA-256, base64 encoded) of previous sigchain statement, or omitted for the root statement. |
 | seq    | int    | Sequence number, starting at 1 for the root statement.                                            |
 | revoke | int    | (Optional) Sequence number of a statement to revoke.                                              |
-| ts     | int    | (Optional) Timestamp, number of milliseconds since 1 January 1970 00:00 UTC.                      |
+| ts     | int    | (Optional) Unverified timestamp, number of milliseconds since 1 January 1970 00:00 UTC.           |
 | type   | string | (Optional) Statement type ("", "revoke", "user").                                                 |
 
 The format for a statement:

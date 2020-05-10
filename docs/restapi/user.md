@@ -6,7 +6,8 @@ Search for keys by user name or service.
 
 ::: warning
 If you use these search results directly, you are trusting the keys.pub server.
-It is recommended to use this API to find a key and then to verify the user statement in the key's sigchain.
+It is recommended to use this API to find a key and then to verify the user statement in the key's sigchain yourself.
+For details on how to verify sigchains and users see [User#Verify](/docs/specs/user.md#verify).
 :::
 
 | Request | Description              |

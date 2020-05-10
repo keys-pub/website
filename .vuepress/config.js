@@ -156,6 +156,7 @@ module.exports = {
         path: "/docs/lib-index",
         children: [
           "/docs/lib/keyring",
+          "/docs/lib/user",
           "/docs/lib/saltpack",
           "/docs/lib/noise",
           "/docs/lib/packages",

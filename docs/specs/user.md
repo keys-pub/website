@@ -107,3 +107,14 @@ keys sigchain show -kid kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryq
 ## Revoke
 
 You can remove the user account by revoking the sigchain statement or removing the signed statement at the URL.
+
+## Verify
+
+For example, to verify the user `keys.pub@https` matches the key `kex1ydecaulsg5qty2axyy770cjdvqn3ef2qa85xw87p09ydlvs5lurq53x0p3` you would:
+
+- Get the sigchain from [keys.pub/sigchain/kex1ydecaulsg5qty2axyy770cjdvqn3ef2qa85xw87p09ydlvs5lurq53x0p3](https://keys.pub/sigchain/kex1ydecaulsg5qty2axyy770cjdvqn3ef2qa85xw87p09ydlvs5lurq53x0p3).
+- Verify the sigchain statements.
+- Get the user from the sigchain.
+- Request the user URL and verify the signed statement matches the sigchain statement.
+
+See the example at [github.com/keys-pub/keysd/http/client/sigchain_examples_test.go](https://github.com/keys-pub/keysd/blob/master/http/client/sigchain_examples_test.go)
