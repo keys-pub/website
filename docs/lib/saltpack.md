@@ -5,7 +5,7 @@ Encryption by default uses the [Saltpack binary encryption format](https://saltp
 This format uses NaCl's box and secretbox constructions and provides authenticity, repudability and anonymity.
 See [saltpack.org](https://saltpack.org) for more details.
 
-This [github.com/keys-pub/keys/saltpack](https://https://github.com/keys-pub/keys/tree/master/saltpack) package allows you to encrypt/decrypt and sign/verify using Saltpack and
+This [github.com/keys-pub/keys/saltpack](https://github.com/keys-pub/keys/tree/master/saltpack) package allows you to encrypt/decrypt and sign/verify using Saltpack and
 EdX25519 keys.
 
 ## Encrypt
