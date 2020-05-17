@@ -12,7 +12,7 @@ EdX25519 keys.
 
 The following example describes how to:
 
-- Generate an EdX25519 key
+- Generate an X25519 key
 - Encrypt to recipients (Alice and Bob) using Saltpack
 
 ```go
@@ -22,17 +22,13 @@ import (
 )
 
 ...
-// Alice
-alice := keys.GenerateEdX25519Key()
-
-// Bob
-bobID := keys.ID("kex1yy7amjzd5ld3k0uphvyetlz2vd8yy3fky64dut9jdf9qh852f0nsxjgv0m")
+alice := keys.GenerateX25519Key()
+bob := keys.GenerateX25519Key()
 
 message := []byte("hi bob")
 
 // Encrypt using Saltpack from alice to bob (include alice as a recipient too).
-sp := saltpack.New(nil)
-encrypted, err := sp.EncryptArmored(message, alice.X25519Key(), bobID, alice.ID())
+encrypted, err := saltpack.EncryptArmored(message, alice, bob.ID(), alice.ID())
 if err != nil {
     log.Fatal(err)
 }
@@ -44,7 +40,6 @@ fmt.Printf("Encrypted: %s\n", string(encrypted))
 
 The following example decrypts the message from the Encrypt example:
 
-- Setup a keyring.Keyring and keys.Store
 - Import a EdX25519 key
 - Decrypt and verify a Saltpack message
 
@@ -56,62 +51,35 @@ import (
 )
 
 ...
+// Decode Bob's key.
+// keys.ID("kbx18x22l7nemmxcj76f9l3aaflc5487lp5u5q778gpe3t3wzhlqvu8qxa9z07")
+key := `BEGIN X25519 KEY MESSAGE.
+umCRo9iHIudLWoz 4Ugt0hUXQVJ7lhV p7A9mb3kOTg6PeV fhqetAc9ZOUjagi
+91gENEkp0xfjF2E Tyakwe90kzo1FNT gRacWRL5B59strN OoZYHQooqvlMKM.
+END X25519 KEY MESSAGE.`
+bob, err := keys.DecodeKeyFromSaltpack(key, "", true)
+if err != nil {
+    log.Fatal(err)
+}
 
 // Message from Alice.
-aliceID := keys.ID("kex1vrpxw9rqmf49kygc7ujjrdlx8lkzaarjc3s24j73xlqxhwvsyx2sw06r82")
+aliceID := keys.ID("kbx17jhqvdrgdyruyseuaat0rerj7ep4n63n4klufzxtzmk9p3d944gs4fg39g")
 encrypted := `BEGIN SALTPACK ENCRYPTED MESSAGE.
-kcJn5brvybfNjz6 D5ll2Nk0YusOJBf 9x1CB6V3o7cdMOV ZPenXvEVhLpMBj0 8rJiM2GJTyXbhDn
-cGIoczvWtRoxL5r 3EIPrfVqpwhLDke LfCV6YykdYdGwY1 lUfrzkOIUGdeURb HDSwgrTSrcexwj3
-ix9Mw1FVXQGBwBV yil8lLyD1q0VFGv KmgJYyARppqQEIF HgAsZq0BJL6Dosz WGrFalmG90QA6PO
-avDlwRXMDbjKFvE wQtaBDKXVSBaM9k 0Xu0CfdGUkEICbN vZNV67cGqEz2IiH kr8.
+kcJn5brvybfNjz6 D5ll2Nk0YiiGFCz I2xgcLXuPzYNBe3 OboFDA8Gh0TxosH yo82IRf2OZzteqO
+GaPWlm7t0lC0M0U vNnOvsussLf1nMw Oo1Llf9oAbA7qxa GjupUEWnTgyjjUn GKb3WvtjSgRsJS2
+Y92GMEx8cHvbGrJ zvLGlbqAhEIDNZ2 SE15aoV6ahVxeVH 1inHyghv3H1oTAC K86mBl4fg9FY1QK
+4n0gLOmSHbD8UYH V3HAPS0yaBC4xJB g3y04Xcqiij36Nb WmJgvSFdGugXd7O yfU.
 END SALTPACK ENCRYPTED MESSAGE.`
 
-// Bob creates a keyring.Keyring and keys.Store.
-kr, err := keyring.New("BobKeyring", keyring.System())
-if err != nil {
-    log.Fatal(err)
-}
-if err := kr.UnlockWithPassword("bobpassword"); err != nil {
-    log.Fatal(err)
-}
-ks := keys.NewStore(kr)
-
-// Import EdX25519 key to bob's keys.Store.
-kmsg := `BEGIN EDX25519 KEY MESSAGE.
-E9zL57KzBY1CIdJ d5tlpnyCIX8R5DB oLswy2g17kbfK4s CwryRUoII3ZNk3l
-scLQrPmgNuKi9OK 7ugGoVWBY2n5xbK 7w500Vp2iXo6LAe XZiB06UjUdCoYJv
-YjKbul2B61uxTZc waeBgRV91RZoKCn xLQnRhLXE2KC.
-END EDX25519 KEY MESSAGE.`
-bob, err := keys.DecodeKeyFromSaltpack(kmsg, "password", false)
-if err != nil {
-    log.Fatal(err)
-}
-if err := ks.SaveKey(bob); err != nil {
-    log.Fatal(err)
-}
-if err := ks.SavePublicKey(aliceID); err != nil {
-    log.Fatal(err)
-}
-
-// Bob decrypts the saltpack message.
-sp := saltpack.New(ks)
-out, sender, err := sp.DecryptArmored(encrypted)
+// Bob decrypts
+out, sender, err := saltpack.DecryptArmored(encrypted, saltpack.NewKeyStore(bob))
 if err != nil {
     log.Fatal(err)
 }
 
-// The sender from Saltpack Decrypt is a X25519 public key, so find the
-// corresponding EdX25519 public key.
-if sender != nil {
-    pk, err := ks.FindEdX25519PublicKey(sender.ID())
-    if err != nil {
-        log.Fatal(err)
-    }
-    if pk != nil && pk.ID() == aliceID {
-        fmt.Printf("signer is alice\n")
-    }
+if sender != nil && sender.ID() == aliceID {
+    fmt.Printf("signer is alice\n")
 }
-
 fmt.Printf("%s\n", string(out))
 ```
 
@@ -126,13 +94,11 @@ import (
 )
 ...
 
-sp := saltpack.New(nil)
-
 alice := keys.GenerateEdX25519Key()
 
 message := []byte("hi from alice")
 
-sig, err := sp.SignArmored(message, alice)
+sig, err := saltpack.SignArmored(message, alice)
 if err != nil {
     log.Fatal(err)
 }
@@ -151,8 +117,6 @@ import (
 )
 ...
 
-sp := saltpack.New(nil)
-
 aliceID := keys.ID("kex1w2jep8dkr2s0g9kx5g6xe3387jslnlj08yactvn8xdtrx4cnypjq9rpnux")
 signed := `BEGIN SALTPACK SIGNED MESSAGE.
 kXR7VktZdyH7rvq v5wcIkHbs7mPCSd NhKLR9E0K47y29T QkuYinHym6EfZwL
@@ -162,7 +126,7 @@ cqA4TCjz5V9VpuO zuIQ55lRQLeP5kU aWFxq5Nl8WsPqlR RdX86OuTbaKUvKI
 wdNd6ISacrT0I82 qZ71sc7sTxiMxoI P43uCGaAZZ3Ab62 vR8N6WQPE8.
 END SALTPACK SIGNED MESSAGE.`
 
-out, signer, err := sp.VerifyArmored(signed)
+out, signer, err := saltpack.VerifyArmored(signed)
 if err != nil {
     log.Fatal(err)
 }
