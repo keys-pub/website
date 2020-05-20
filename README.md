@@ -37,7 +37,7 @@ This project is in development and has not been audited.
 
 ## Why?
 
-Key management is hard. We need tools, libraries, apps and documentation to help us.
+Key management is hard. We need tools, libraries, apps, services and documentation to help us.
 
 ## How does it work?
 
