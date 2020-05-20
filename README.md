@@ -23,7 +23,7 @@ Or the [command line only](/docs/cli/install.md).
 - Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers (using [Noise](https://noiseprotocol.org/)).
 - Most features are available in both the app and on the command line.
 - 100% open source ([github.com/keys-pub](http://github.com/keys-pub)) and cross platform (macOS, Windows, Linux).
-- _Coming soon:_ Backup keys/secrets to your private self-hosted storage on S3, GCP, Dropbox, etc.
+- _Coming soon:_ Backup/sync keys/secrets to a private git repository.
 - _Coming soon:_ Support for hardware keys like [SoloKeys](https://solokeys.com/), YubiKeys, FIDO2.
 - _Coming soon:_ Mobile apps.
 
@@ -86,14 +86,3 @@ All the features in the app are available through Go libraries.
 - [Keybase](https://keybase.io): This project borrows many ideas from Keybase, including sigchains and user (proofs), and uses [Saltpack](https://saltpack.org) and [keybase/go-keychain](https://github.com/keybase/go-keychain) and other packages.
   However, this project only links a single key to a user.
 - [Age](https://github.com/FiloSottile/age): We also use Bech32 as a key identifiers, and [convert Ed25519 keys to X25519](https://blog.filippo.io/using-ed25519-keys-for-encryption/).
-
-### Coming soon
-
-- Other key types like age?
-- Legacy/pgp?
-- Better documentation
-- More services (Facebook, Website)
-- Inbox
-- Import SSH ed25519 keys
-- Wormhole through relays (syncthing)
-- Syncthing integration
