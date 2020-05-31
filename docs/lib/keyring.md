@@ -10,13 +10,13 @@ The following example describes how to:
 ```go
 // Initialize Keyring.
 // You can use keyring.System, keyring.SystemOrFS, keyring.FS, keyring.Mem or git.NewRepository.
-kr, err := keyring.New("AppName", keyring.SystemOrFS())
+kr, err := keyring.New(keyring.SystemOrFS("AppName"))
 if err != nil {
     log.Fatal(err)
 }
 
 // Setup the keyring.
-if _, _, err := kr.SetupWithPassword("mypassword"); err != nil {
+if _, err := kr.UnlockWithPassword("mypassword", true); err != nil {
     log.Fatal(err)
 }
 
@@ -41,15 +41,5 @@ if err != nil {
 }
 for _, item := range items {
     fmt.Printf("%s: %v\n", item.ID, string(item.Data))
-}
-
-// Lock
-err = kr.Lock()
-if err != nil {
-    log.Fatal(err)
-}
-// After setup, you can use UnlockWithPassword.
-if _, _, err := kr.UnlockWithPassword("mypassword"); err != nil {
-    log.Fatal(err)
 }
 ```
