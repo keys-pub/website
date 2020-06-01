@@ -27,5 +27,5 @@ keys.pub provides Go packages to:
 - [github.com/keys-pub/keys/keyring](https://github.com/keys-pub/keys/tree/master/keyring): Securely store secrets on macOS, Windows and Linux.
 - [github.com/keys-pub/keys/saltpack](https://github.com/keys-pub/keys/tree/master/saltpack): Encrypt/Decrypt/Sign/Verify using Saltpack.
 - [github.com/keys-pub/keys/noise](https://github.com/keys-pub/keys/tree/master/noise): Noise protocol integration.
-- [github.com/keys-pub/keysd/http/client](https://github.com/keys-pub/keysd/tree/master/http/client): Client REST API for keys.pub.
-- [github.com/keys-pub/keysd/db](https://github.com/keys-pub/keysd/tree/master/db): Secure (leveldb) database.
+- [github.com/keys-pub/keys-ext/http/client](https://github.com/keys-pub/keys-ext/tree/master/http/client): Client REST API for keys.pub.
+- [github.com/keys-pub/keys-ext/db](https://github.com/keys-pub/keys-ext/tree/master/db): Secure (leveldb) database.

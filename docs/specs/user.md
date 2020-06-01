@@ -117,4 +117,4 @@ For example, to verify the user `keys.pub@https` matches the key `kex1ydecaulsg5
 - Get the user from the sigchain.
 - Request the user URL and verify the signed statement matches the sigchain statement.
 
-See the example at [github.com/keys-pub/keysd/http/client/sigchain_examples_test.go](https://github.com/keys-pub/keysd/blob/master/http/client/sigchain_examples_test.go)
+See the example at [github.com/keys-pub/keys-ext/http/client/sigchain_examples_test.go](https://github.com/keys-pub/keys-ext/blob/master/http/client/sigchain_examples_test.go)
