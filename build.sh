@@ -1,6 +1,8 @@
 
+# Cleanup old assets
+find ../../keys-server/public/docs -mtime +30 -exec rm {} \;
+find ../../keys-server/public/assets -mtime +30 -exec rm {} \;
+
 vuepress build
-# TODO: Cleanup old assets
-#trash ../../keys-server/public/docs
-#trash ../../keys-server/public/assets
+
 cp -R .vuepress/dist/* ../../keys-server/public
