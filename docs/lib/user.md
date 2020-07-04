@@ -1,5 +1,9 @@
 # User
 
-How to verify a sigchain and user:
+::: warning
+This documentation is in progress.
+:::
 
-- [github.com/keys-pub/keys-ext/http/client/sigchain_examples_test.go](https://github.com/keys-pub/keys-ext/blob/master/http/client/sigchain_examples_test.go)
+## Examples
+
+- [Verify a User in a Sigchain](https://github.com/keys-pub/keys-ext/blob/master/http/client/sigchain_examples_test.go)

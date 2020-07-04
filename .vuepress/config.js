@@ -155,9 +155,8 @@ module.exports = {
         collapsable: false,
         path: "/docs/lib-index",
         children: [
-          "/docs/lib/keyring",
-          "/docs/lib/user",
           "/docs/lib/saltpack",
+          "/docs/lib/user",
           "/docs/lib/noise",
           "/docs/lib/packages",
         ],
