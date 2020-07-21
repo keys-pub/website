@@ -2,7 +2,7 @@
 
 Some requests require an Authorization header which includes a signature of the HTTP request.
 
-The signature should be specified with an `Authorization` header include the (EdX25519) key identifier and signature bytes (base64 encoded) in the format `{KID}:{Signature}`.
+The signature should be specified with an `Authorization` header including the (EdX25519) key identifier and signature bytes (base64 encoded) in the format `{KID}:{Signature}`.
 
 For example,
 
