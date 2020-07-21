@@ -46,7 +46,7 @@ keys generate -t x25519
 kbx18e99hurn8fly3lls0v53jn9qzduey87l4vya0amjylvpvmfhkdaqtfc2v7
 ```
 
-# Key Identifiers
+## Key Identifiers
 
 Key identifiers "`kid`" use the [bech32](https://en.bitcoin.it/wiki/BIP_0173) format.
 

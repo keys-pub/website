@@ -173,7 +173,6 @@ module.exports = {
         children: [
           "/docs/specs/auth",
           "/docs/specs/keys",
-          "/docs/specs/kid",
           "/docs/specs/sigchain",
           "/docs/specs/user",
           "/docs/specs/vault",
