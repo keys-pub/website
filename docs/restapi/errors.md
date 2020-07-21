@@ -20,3 +20,4 @@ The API returns errors in the format:
 | 409  | Resource already exists.                         |
 | 413  | Entity too large, if request body was too large. |
 | 429  | Too many requests, if you hit a request limit.   |
+| 500  | Internal server error.                           |

@@ -2,6 +2,9 @@ module.exports = {
   title: "keys.pub",
   description:
     "Cryptographic key management, saltpack, noise, sigchains, user identities, signing, encryption",
+  extendMarkdown: (md) => {
+    md.use(require("markdown-it-footnote"));
+  },
   head: [
     [
       "link",
@@ -145,9 +148,11 @@ module.exports = {
         collapsable: false,
         path: "/docs/restapi-index",
         children: [
+          "/docs/restapi/auth",
+          "/docs/restapi/errors",
           "/docs/restapi/user",
           "/docs/restapi/sigchain",
-          "/docs/restapi/errors",
+          "/docs/restapi/vault",
         ],
       },
       {
@@ -169,9 +174,9 @@ module.exports = {
           "/docs/specs/auth",
           "/docs/specs/keys",
           "/docs/specs/kid",
-          "/docs/specs/keyring",
           "/docs/specs/sigchain",
           "/docs/specs/user",
+          "/docs/specs/vault",
           "/docs/specs/wormhole",
         ],
       },

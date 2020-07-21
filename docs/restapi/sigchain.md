@@ -4,7 +4,7 @@ The _keys.pub_ server provides an API for publishing and accessing [sigchains](/
 
 ## GET /sigchain/:kid
 
-Get a sigchain for a user public key.
+Get a sigchain for a key.
 
 ```shell
 curl https://keys.pub/sigchain/kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c
