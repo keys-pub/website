@@ -25,9 +25,9 @@ keys encrypt -r gabriel@github -i image.png
 Decrypt from (from stdin).
 
 ```shell
-cat msg.enc | keys decrypt -a
+cat msg.enc | keys decrypt
 
-verified kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c gabriel@github
+verified: kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c saltpack-encrypt gabriel@github
 My secret 🤓
 ```
 
@@ -36,5 +36,5 @@ Decrypt image.png.enc to image.png.
 ```shell
 keys decrypt -in image.png.enc
 
-verified kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c gabriel@github
+out: /Users/gabe/Pictures/image.png
 ```

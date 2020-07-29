@@ -40,7 +40,7 @@ Saltpack version 2 signing is currently the only output format.
 Verify image.png from image.png.sig was signed by `gabriel@github`.
 
 ```shell
-keys verify -in image.png -signer gabriel@github
+keys verify -i image.png -x image.png.sig
 ```
 
 Verify and output a signed message:
@@ -53,5 +53,5 @@ I'm gabriel on Github 🤓
 Verify image.png.signed (attached binary Saltpack signature) was signed by `gabriel@github` and create `image.png`.
 
 ```shell
-keys verify -s gabriel@github -i image.png.signed -m binary,attached
+keys verify -i image.png.signed -s gabriel@github
 ```
