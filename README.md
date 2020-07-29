@@ -6,11 +6,11 @@ title: keys.pub - Cryptographic key management, sigchains, user identities, sign
 
 ## Install
 
-[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.0.48/Keys-0.0.48.dmg)
+[Download for macOS](https://github.com/keys-pub/app/releases/download/v0.1.7/Keys-0.1.7.dmg)
 
-[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.0.48/Keys-0.0.48.msi)
+[Download for Windows](https://github.com/keys-pub/app/releases/download/v0.1.7/Keys-0.1.7.msi)
 
-[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.0.48/Keys-0.0.48.AppImage)
+[Download for Linux](https://github.com/keys-pub/app/releases/download/v0.1.7/Keys-0.1.7.AppImage)
 
 Or the [command line only](/docs/cli/install.md).
 
@@ -23,7 +23,7 @@ Or the [command line only](/docs/cli/install.md).
 - Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers (using [Noise](https://noiseprotocol.org/)).
 - Most features are available in both the app and on the command line.
 - 100% open source ([github.com/keys-pub](http://github.com/keys-pub)) and cross platform (macOS, Windows, Linux).
-- _Coming soon:_ Backup, sync keys and secrets.
+- Backup, sync keys and secrets.
 - _Coming soon:_ Support for hardware keys like [SoloKeys](https://solokeys.com/), YubiKeys, FIDO2.
 - _Coming soon:_ Mobile apps.
 
