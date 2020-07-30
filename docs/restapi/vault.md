@@ -1,13 +1,18 @@
 # Vault
 
-A vault is an append only log of data. Data can be requested from an index into this log.
-Vault [requests must be signed](/docs/restapi/auth.md) with the EdX25519 key associated with the vault.
+This document describes the Vault Web API, if you want to understand how the vault is designed see the [Vault Spec](/docs/specs/vault.md).
 
-The data itself is not verified in an way, it is stored just as it is received.
-It is up to the clients to encrypt this data (typically using the same EdX25519 key).
-You probably want to use the [github.com/keys-pub/keys-ext/http/client](https://pkg.go.dev/github.com/keys-pub/keys-ext/http/client) package instead.
+::: warning
+This feature is experimental and this documentation is in progress.
+:::
+
+This API stores and retrieves data in an append only log. Clients can request data from an index into this log.
+[Requests are authorized](/docs/restapi/auth.md) with the EdX25519 key associated with the vault.
 
 This API is used by the clients to (optionally) backup and sync vault items.
+
+Data is stored in the order it is received, and should be end-to-end encrypted.
+You probably want to use the [github.com/keys-pub/keys-ext/http/client](https://pkg.go.dev/github.com/keys-pub/keys-ext/http/client) package instead of this API directly.
 
 ## GET /vault/:kid
 

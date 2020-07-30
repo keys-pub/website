@@ -152,6 +152,7 @@ module.exports = {
           "/docs/restapi/errors",
           "/docs/restapi/user",
           "/docs/restapi/sigchain",
+          "/docs/restapi/share",
           "/docs/restapi/vault",
         ],
       },

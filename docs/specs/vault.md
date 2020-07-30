@@ -1,35 +1,54 @@
 # Vault
 
 ::: warning
-This documentation is in progress.
+This feature is experimental and this documentation is in progress.
 :::
 
-A vault is an append only encrypted log used to store secrets.
+A vault is an end-to-end encrypted append only log used to securely store secrets.
+The format for the vault is designed to preserve history and allow for backup and syncing.
 
-The format for the vault is designed to track changes and allow for syncing.
+The [github.com/keys-pub/keys-ext/vault](https://pkg.go.dev/github.com/keys-pub/keys-ext/vault) package implements this spec.
 
-## Master Key
+The vault is saved locally on clients in a leveldb database (Vault DB).
+Syncing vaults to a server is entirely optional, and if enabled, uses the [Vault Web API](/docs/restapi/vault.md).
 
-Vault items are encrypted with a master key (MK) which is encrypted with key encryption keys (KEK's).[^1]
-KEK's are created from passwords (Argon2id), hardware security keys (FIDO2) or paper key backups.
+## Vault DB
 
-## KEK's
+The vault database is a leveldb database where entries are encrypted with a (master) key.
 
-### Passwords
+### Provisioning Auth
 
-When generating a KEK from a password, we use the Argon2id KDF with the following parameters:
+Provisioning auth, such as creating a password or adding a FIDO2 hardware key or paper key backup, creates a key encryption key (or KEK) which encrypts this master key.
+This allows auth to be provisioned (added) or removed without having to re-encrypt all the items.
+(Some vault metadata required for provisioning, such as salt values, are not encrypted in the local database.)
 
-```go
-key := argon2.IDKey(password, salt, 1, 64*1024, 4, 32)
-```
+## Vault Web API
 
-### FIDO2
+If a vault is synced to the server, data is **also** encrypted with a Vault API key and saved to the server using the [Vault Web API](/docs/restapi/vault.md).
+This API key is a ([EdX25519](/docs/specs/keys.md)) key derived from the master key (using HKDF with a random 32 byte salt).
 
-_This documentation is in progress..._
+### Syncing
 
-## API Key
+When syncing to the server, we push unsaved changes and then pull all changes.
 
-If a vault is synced to the server, data is also encrypted with a vault API ([EdX25519](/docs/specs/keys.md)) key. This key is also used to sign (and authorize) requests to the server (via the [Vault API](/docs/restapi/vault.md)).
-This API key is derived from the master key (using HKDF with a random 32 byte salt).
+1. Unsaved changes are saved via POST /vault/:kid.
+2. After push, all changes are retrieved (including changes we just pushed) using GET /vault/:kid from the previous index (or 0 is never synced).
 
-[^1]: Vault configuration required to unlock the vault, such as salt values, are not encrypted.
+Changes are encrypted with the vault API key and include a nonce (to prevent replay).
+The server returns data in the order it was received and includes an index and timestamp for each change.
+
+### Connecting to Vault
+
+If connecting another device with the vault, an authenticated client can generate a "vault auth phrase".
+This encrypts the vault API key and salt with a KEK and shares it via the [Share API](/docs/restapi/share.md) with an expiration of 5 minutes or first access, whichever happens first.
+The auth phrase is the BIP39 encoded (EdX25519) private seed of this KEK.
+
+### Hosting your own Vault
+
+In the future, users will be able host their own vault data instead of using keys.pub.
+The API server is not yet configurable on the clients, so this feature is not available yet.
+
+### Removing a Vault
+
+Vaults can be "unsynced" from the server, which deletes all data from the server and returns the local database to an "unsynced" state.
+If other clients were connected to the vault, they will stop syncing.
