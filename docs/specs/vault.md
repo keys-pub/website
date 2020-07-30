@@ -29,10 +29,11 @@ This API key is a ([EdX25519](/docs/specs/keys.md)) key derived from the master 
 
 ### Syncing
 
-When syncing to the server, we push unsaved changes and then pull all changes.
+When syncing to the server, we push unsaved changes and then pull all changes from the current index.
 
-1. Unsaved changes are saved via POST /vault/:kid.
-2. After push, all changes are retrieved (including changes we just pushed) using GET /vault/:kid from the previous index (or 0 is never synced).
+1. Push unsaved changes are saved via `POST /vault/:kid`.
+2. Pull changes using `GET /vault/:kid` from the previous index (or 0 if never synced). This includes the changes we just pushed.
+3. Save index.
 
 Changes are encrypted with the vault API key and include a nonce (to prevent replay).
 The server returns data in the order it was received and includes an index and timestamp for each change.
