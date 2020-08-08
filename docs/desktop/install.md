@@ -1,10 +1,10 @@
 # Install
 
-[Download for macOS (0.1.9)](https://github.com/keys-pub/app/releases/download/v0.1.9/Keys-0.1.9.dmg)
+[Download for macOS (0.1.11)](https://github.com/keys-pub/app/releases/download/v0.1.11/Keys-0.1.11.dmg)
 
-[Download for Windows (0.1.9)](https://github.com/keys-pub/app/releases/download/v0.1.9/Keys-0.1.9.msi)
+[Download for Windows (0.1.11)](https://github.com/keys-pub/app/releases/download/v0.1.11/Keys-0.1.11.msi)
 
-[Download for Linux (0.1.9)](https://github.com/keys-pub/app/releases/download/v0.1.9/Keys-0.1.9.AppImage)
+[Download for Linux (0.1.11)](https://github.com/keys-pub/app/releases/download/v0.1.11/Keys-0.1.11.AppImage)
 
 Or the [command line only](/docs/cli/install.md).
 
