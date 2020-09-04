@@ -2,7 +2,7 @@
 
 ## `keys encrypt`
 
-Encrypt text to armored msg.enc (from stdin).
+Encrypt armored text (from stdin).
 
 Specify a key id or user name@service as recipients.
 
@@ -12,9 +12,11 @@ echo -n "My secret 🤓" | keys encrypt -armor -sender gabriel@github \
 -recipient gabriel@github > msg.enc
 ```
 
-Encrypt image.png to image.png.enc.
+By default if sender is specified, [saltpack signcrypt](https://saltpack.org/signcryption-format) is used and the sender is added to the list of recipients.
 
-Sender is optional, if unspecified, is anonymous.
+Sender is optional, if unspecified, is anonymous and [saltpack encrypt](https://saltpack.org/encryption-format-v2) is used.
+
+Encrypt image.png to image.png.enc.
 
 ```shell
 keys encrypt -r gabriel@github -i image.png
@@ -27,7 +29,7 @@ Decrypt from (from stdin).
 ```shell
 cat msg.enc | keys decrypt
 
-verified: kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c saltpack-encrypt gabriel@github
+verified: kex1mnseg28xu6g3j4wur7hqwk8ag3fu3pmr2t5lync26xmgff0dtryqupf80c saltpack-signcrypt gabriel@github
 My secret 🤓
 ```
 
