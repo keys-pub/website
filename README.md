@@ -53,7 +53,7 @@ The [Noise Protocol](https://noiseprotocol.org/) is used to create a secure conn
 
 [Key identifiers](/docs/specs/kid.md) are [Bech32 format](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki), encode the type of key and public key bytes, and include a checksum with error correction.
 
-Your keys and secrets are protected by a [keyring](/docs/specs/keyring.md) which is secured by both the OS and a user supplied password.
+Your keys and secrets are protected by a [Vault](/docs/specs/vault.md) by a password or hardware key.
 
 The app and command line utility connect to a `keysd` daemon thats runs as a [gRPC service](/docs/specs/service.md) on your computer.
 
