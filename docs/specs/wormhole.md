@@ -13,15 +13,15 @@ It uses the [STUN protocol](https://en.wikipedia.org/wiki/STUN) to traverse NAT,
 Steps for Alice (initiator):
 
 - Use STUN protocol to get a remote UDP address.
-- Save this address from STUN via HTTP PUT https://keys.pub/disco/{sender}/{recipient}/offer (encrypted to Bob, signed by Alice) to https://keys.pub/disco/{sender}/{recipient}/offer.
-- Find address for Bob from HTTP GET https://keys.pub/disco/{sender}/{recipient}/answer.
+- Save this address from STUN via HTTP PUT `https://keys.pub/disco/{sender}/{recipient}/offer` (encrypted to Bob, signed by Alice) to `https://keys.pub/disco/{sender}/{recipient}/offer`.
+- Find address for Bob from HTTP GET `https://keys.pub/disco/{sender}/{recipient}/answer`.
 - Connect to Bob's address.
 - Initiate Noise handshake.
 
 Steps for Bob:
 
 - Use STUN protocol to get a remote UDP address.
-- Find address for Alice from HTTP GET https://keys.pub/disco/{sender}/{recipient}/offer.
-- Save bob's address from STUN (encrypted for Alice, signed by Bob) to HTTP PUT https://keys.pub/disco/{sender}/{recipient}/answer.
+- Find address for Alice from HTTP GET `https://keys.pub/disco/{sender}/{recipient}/offer`.
+- Save bob's address from STUN (encrypted for Alice, signed by Bob) to HTTP PUT `https://keys.pub/disco/{sender}/{recipient}/answer`.
 - Connect to Alice's address (using SCTP).
 - Wait for Noise handshake.
