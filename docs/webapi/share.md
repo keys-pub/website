@@ -11,11 +11,11 @@ Get share.
 | ------- | --------------------------------------------------------------------------------- |
 | expire  | Time duration before expire, "5m" is 5 minutes, "30s" is 30 seconds, max is "15m" |
 
-Requires [Authorization](/docs/restapi/auth.md).
+Requires [Authorization](/docs/webapi/auth.md).
 
 Max data shared is 512 bytes.
 
-## PUT /vault/:kid
+## PUT /share/:kid
 
 Save to share.
 
@@ -23,6 +23,6 @@ Save to share.
 | ------- | --------------------------------------------------------------------------------- |
 | expire  | Time duration before expire, "5m" is 5 minutes, "30s" is 30 seconds, max is "15m" |
 
-Requires [Authorization](/docs/restapi/auth.md).
+Requires [Authorization](/docs/webapi/auth.md).
 
 Max data shared is 512 bytes.

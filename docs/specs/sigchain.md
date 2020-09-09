@@ -59,6 +59,6 @@ BytesToSign = b[0:9] + b[97:]
 
 See [How (not) to sign a JSON object](https://latacora.micro.blog/2019/07/24/how-not-to.html) on why this is important.
 
-### REST API
+### Web API
 
-You can access sigchains via the [/sigchain](/docs/restapi/sigchain.md) API.
+You can access sigchains via the [/sigchain](/docs/webapi/sigchain.md) API.

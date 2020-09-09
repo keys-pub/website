@@ -8,7 +8,7 @@ A vault is an end-to-end encrypted append only log used to securely store secret
 The format for the vault is designed to preserve history and allow for backup and syncing.
 
 The vault is saved locally on clients in a leveldb database (Vault DB).
-Syncing vaults to a server is entirely optional, and if enabled, uses the [Vault Web API](/docs/restapi/vault.md).
+Syncing vaults to a server is entirely optional, and if enabled, uses the [Vault Web API](/docs/webapi/vault.md).
 
 The [github.com/keys-pub/keys-ext/vault](https://pkg.go.dev/github.com/keys-pub/keys-ext/vault) package implements this spec.
 
@@ -24,7 +24,7 @@ This allows auth to be provisioned (added) or removed without having to rekey it
 
 ## Vault Web API
 
-If a vault is synced to the server, data is **also** encrypted with a Vault API key and saved to the server using the [Vault Web API](/docs/restapi/vault.md).
+If a vault is synced to the server, data is **also** encrypted with a Vault API key and saved to the server using the [Vault Web API](/docs/webapi/vault.md).
 This API key is a ([EdX25519](/docs/specs/keys.md)) key derived from the master key (using HKDF with a random 32 byte salt).
 
 ### Syncing
@@ -41,7 +41,7 @@ The server returns data in the order it was received and includes an index and t
 ### Connecting to a Vault
 
 If connecting another device with the vault, an authenticated client can generate a "vault auth phrase".
-This encrypts the vault API key and salt with a KEK and shares it via the [Share API](/docs/restapi/share.md) with an expiration of 5 minutes or first access, whichever happens first.
+This encrypts the vault API key and salt with a KEK and shares it via the [Share API](/docs/webapi/share.md) with an expiration of 5 minutes or first access, whichever happens first.
 The auth phrase is the BIP39 encoded (EdX25519) private seed of this KEK.
 
 ### Hosting your own Vault
