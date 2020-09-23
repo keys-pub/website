@@ -1,5 +1,7 @@
 {
-  "dependencies": {
+  "name": "keys.pub",
+  "license": "MIT",
+  "devDependencies": {
     "markdown-it-footnote": "^3.0.2",
     "vuepress": "^1.5.4"
   }
