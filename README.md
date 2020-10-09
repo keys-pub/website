@@ -18,13 +18,13 @@ Or the [command line only](/docs/cli/install.md).
 
 - Manage cryptographic [keys](/docs/specs/keys.md), [sigchains](/docs/specs/sigchain.md) and [user identities](/docs/specs/user.md).
 - [Search for keys](/docs/webapi/user.md#get-user-search), verify and import them.
-- Securely store passwords and secrets.
+- Securely store passwords and secrets in a [Vault](/docs/specs/vault.md). Backup and sync to other devices.
 - [Encrypt, decrypt](/docs/cli/encrypt.md), [sign, verify](/docs/cli/sign.md) (using [Saltpack](https://saltpack.org)).
-- Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers (using [Noise](https://noiseprotocol.org/)).
+- FIDO2 support for hardware keys like [SoloKeys](https://solokeys.com/), YubiKeys.
 - Most features are available in both the app and on the command line.
 - 100% open source ([github.com/keys-pub](http://github.com/keys-pub)) and cross platform (macOS, Windows, Linux).
-- Backup, sync keys and secrets.
-- _Coming soon:_ Support for hardware keys like [SoloKeys](https://solokeys.com/), YubiKeys, FIDO2.
+- _Experimental_: Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers (using [Noise](https://noiseprotocol.org/)).
+- _Coming soon:_ Harware key extensions.
 - _Coming soon:_ Mobile apps.
 
 <img src="./app-encrypt.jpg"/>
