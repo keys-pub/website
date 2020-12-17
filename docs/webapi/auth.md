@@ -13,7 +13,7 @@ kex1nh4jwl3zy0xz8m7eaxvd6uluqwfg3tt2k0rvdlsa6f2jeckvfrtsfd6jh8:pJ/x7hzEcqPZ9cWGm
 The bytes to sign are `{Method},{URL},{ContentHash}`.
 
 The Method is the HTTP method (GET, PUT, POST, DELETE, HEAD).
-The URL must be in a canonical form (parameters must be in alphabetical order).
+The URL must be in a canonical form (use same CanonicalURI format as AWS signing).
 The ContentHash is the base64 encoded SHA256 hash of the HTTP body (or empty string if no body content).
 
 The URL must include a timestamp (`ts`) and a nonce (`nonce`) parameter.
