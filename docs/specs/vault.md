@@ -4,7 +4,7 @@
 This feature is experimental and this documentation is in progress.
 :::
 
-A vault is an end-to-end encrypted append only log used to securely store secrets.
+A vault is an encrypted database used to securely store secrets.
 The format for the vault is designed to preserve history and allow for backup and syncing.
 
 The vault is saved locally on clients in a leveldb database (Vault DB).
@@ -35,7 +35,7 @@ When syncing to the server, we push unsaved changes and then pull all changes fr
 2. Pull changes using `GET /vault/:kid` from the previous index (or 0 if never synced). This includes the changes we just pushed.
 3. Save the new index.
 
-Changes are encrypted with the vault API key and include a nonce (to prevent replay).
+Changes are encrypted with the vault API key.
 The server returns data in the order it was received and includes an index and timestamp for each change.
 
 ### Connecting to a Vault
