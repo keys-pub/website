@@ -1,7 +1,7 @@
 
 # Cleanup old assets
-find ../../keys-server/public/docs -mtime +30 -exec rm {} \;
-find ../../keys-server/public/assets -mtime +30 -exec rm {} \;
+find ../../keys-server/public/docs -mtime +90 -exec rm {} \;
+find ../../keys-server/public/assets -mtime +90 -exec rm {} \;
 
 yarn vuepress build
 
