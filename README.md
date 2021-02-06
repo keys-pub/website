@@ -27,10 +27,6 @@ Or the [command line only](/docs/cli/install.md).
 - _Coming soon:_ Harware key extensions.
 - _Coming soon:_ Mobile apps.
 
-::: warning
-Twitter access is not currently working, and may be a few days before a release is available to fix this issue.
-:::
-
 <img src="./app-encrypt.jpg"/>
 
 <div style="margin-top: -20px; margin-bottom: 20px; font-style: italic; text-align: center">Using the desktop app to encrypt a message from gabriel@github to multiple recipients.</div>
