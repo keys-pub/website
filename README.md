@@ -18,7 +18,6 @@ Or the [command line only](/docs/cli/install.md).
 
 - Manage cryptographic [keys](/docs/specs/keys.md), [sigchains](/docs/specs/sigchain.md) and [user identities](/docs/specs/user.md).
 - [Search for keys](/docs/webapi/user.md#get-user-search), verify and import them.
-- Securely store passwords and secrets in a [Vault](/docs/specs/vault.md). Backup and sync to other devices.
 - [Encrypt, decrypt](/docs/cli/encrypt.md), [sign, verify](/docs/cli/sign.md) (using [Saltpack](https://saltpack.org)).
 - FIDO2 support for hardware keys like [SoloKeys](https://solokeys.com/), YubiKeys.
 - Most features are available in both the app and on the command line.
@@ -52,8 +51,6 @@ The [Saltpack](https://saltpack.org) format is used for signing and encryption.
 The [Noise Protocol](https://noiseprotocol.org/) is used to create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers/keys.
 
 [Key identifiers](/docs/specs/kid.md) are [Bech32 format](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki), encode the type of key and public key bytes, and include a checksum with error correction.
-
-Your keys and secrets are protected by a [Vault](/docs/specs/vault.md) by a password or hardware key.
 
 The app and command line utility connect to a `keysd` daemon thats runs as a [gRPC service](/docs/specs/service.md) on your computer. 3rd party applications can choose to use the command line interface, the gRPC interface or the go library directly.
 

@@ -153,7 +153,6 @@ module.exports = {
           "/docs/webapi/user",
           "/docs/webapi/sigchain",
           "/docs/webapi/share",
-          "/docs/webapi/vault",
         ],
       },
       {
@@ -176,7 +175,6 @@ module.exports = {
           "/docs/specs/keys",
           "/docs/specs/sigchain",
           "/docs/specs/user",
-          "/docs/specs/vault",
           "/docs/specs/wormhole",
         ],
       },

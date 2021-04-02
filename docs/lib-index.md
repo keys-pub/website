@@ -25,4 +25,3 @@ keys.pub provides Go packages to:
 - [github.com/keys-pub/keys/noise](https://github.com/keys-pub/keys/tree/master/noise): Noise protocol integration.
 - [github.com/keys-pub/keys-ext/http/client](https://github.com/keys-pub/keys-ext/tree/master/http/client): Client for keys.pub.
 - [github.com/keys-pub/keys-ext/http/server](https://github.com/keys-pub/keys-ext/tree/master/http/server): Server (keys.pub).
-- [github.com/keys-pub/keys-ext/vault](https://github.com/keys-pub/keys-ext/tree/master/vault): Vault securely stores keys and secrets.
