@@ -117,5 +117,5 @@ keys import -in key.txt
 ```
 
 ```
-keys export kex17hy4kxhdrzj2fs03pljxph4d0qcmlvt4zl5fw9mxcpga3ga0kpvs0mq6wu
+keys import kex17hy4kxhdrzj2fs03pljxph4d0qcmlvt4zl5fw9mxcpga3ga0kpvs0mq6wu
 ```
