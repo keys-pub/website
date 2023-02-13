@@ -14,6 +14,11 @@ title: keys.pub - Cryptographic key management, sigchains, user identities, sign
 
 Or the [command line only](/docs/cli/install.md).
 
+::: warning
+Unfortunately, this project is not currently being worked on.
+I may revisit this in the future, if you would like to sponsor development or hire me please reach out at gabriel@keys.pub.
+:::
+
 ## What is it?
 
 - Manage cryptographic [keys](/docs/specs/keys.md), [sigchains](/docs/specs/sigchain.md) and [user identities](/docs/specs/user.md).
@@ -23,8 +28,6 @@ Or the [command line only](/docs/cli/install.md).
 - Most features are available in both the app and on the command line.
 - 100% open source ([github.com/keys-pub](http://github.com/keys-pub)) and cross platform (macOS, Windows, Linux).
 - _Experimental_: Create a secure connection ([Wormhole](/docs/specs/wormhole.html)) between 2 computers (using [Noise](https://noiseprotocol.org/)).
-- _Coming soon:_ Hardware key extensions.
-- _Coming soon:_ Mobile apps.
 
 <img src="./app-encrypt.jpg"/>
 
